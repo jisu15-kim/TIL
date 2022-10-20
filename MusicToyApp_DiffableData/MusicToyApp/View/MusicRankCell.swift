@@ -13,7 +13,7 @@ class MusicRankCell: UICollectionViewCell {
     @IBOutlet weak var musicArtist: UILabel!
     @IBOutlet weak var musicTitle: UILabel!
     
-    var music: Music?
+    var music: MusicDetail?
     
     override func awakeFromNib() {
         super.awakeFromNib()

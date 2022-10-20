@@ -11,6 +11,7 @@ import UIKit
 class DataManager {
     
     var newArtist: [NewArtist] = []
+    var musicDetail: [MusicDetail] = []
     var music: [Music] = []
     
     private func fetchNewArtistData() {
@@ -34,23 +35,24 @@ class DataManager {
     }
     
     private func fetchMusicData() {
-        music = [
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music01")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music02")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music03")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music04")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music05")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music06")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music07")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music08")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music09")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music10")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music11")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music12")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music13")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music14")),
-            Music(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music15")),
-        ]
+        musicDetail = [
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music01")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music02")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music03")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music04")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music05")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music06")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music07")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music08")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music09")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music10")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music11")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music12")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music13")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music14")),
+            MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music15"))
+       ]
+        music.append(Music(musicDetail: musicDetail))
     }
     
     public func getMusicData() -> [Music] {

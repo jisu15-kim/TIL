@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD5ACFEA290007550037BC18 /* MusicRankMotherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5ACFE8290007550037BC18 /* MusicRankMotherCell.swift */; };
+		CD5ACFEB290007550037BC18 /* MusicRankMotherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD5ACFE9290007550037BC18 /* MusicRankMotherCell.xib */; };
 		CD83AFBD28FC6B4F00BB4B94 /* NewArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD83AFBC28FC6B4F00BB4B94 /* NewArtistModel.swift */; };
 		CD83AFBF28FC6B8400BB4B94 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD83AFBE28FC6B8400BB4B94 /* DataManager.swift */; };
 		CD87152C28FC67AF00E0B18D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87152B28FC67AF00E0B18D /* AppDelegate.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD5ACFE8290007550037BC18 /* MusicRankMotherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRankMotherCell.swift; sourceTree = "<group>"; };
+		CD5ACFE9290007550037BC18 /* MusicRankMotherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicRankMotherCell.xib; sourceTree = "<group>"; };
 		CD83AFBC28FC6B4F00BB4B94 /* NewArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArtistModel.swift; sourceTree = "<group>"; };
 		CD83AFBE28FC6B8400BB4B94 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CD87152828FC67AF00E0B18D /* MusicToyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicToyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +71,8 @@
 				CDE17B5E28FD96FA00A41F92 /* HeaderView.swift */,
 				CDE17B6428FDD1FA00A41F92 /* MusicRankCell.swift */,
 				CDE17B6528FDD1FA00A41F92 /* MusicRankCell.xib */,
+				CD5ACFE8290007550037BC18 /* MusicRankMotherCell.swift */,
+				CD5ACFE9290007550037BC18 /* MusicRankMotherCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +178,7 @@
 			files = (
 				CD87153828FC67B000E0B18D /* LaunchScreen.storyboard in Resources */,
 				CD87153528FC67B000E0B18D /* Assets.xcassets in Resources */,
+				CD5ACFEB290007550037BC18 /* MusicRankMotherCell.xib in Resources */,
 				CD87153328FC67AF00E0B18D /* Main.storyboard in Resources */,
 				CDE17B6728FDD1FA00A41F92 /* MusicRankCell.xib in Resources */,
 			);
@@ -190,6 +197,7 @@
 				CDE17B6628FDD1FA00A41F92 /* MusicRankCell.swift in Sources */,
 				CD83AFBD28FC6B4F00BB4B94 /* NewArtistModel.swift in Sources */,
 				CD87152C28FC67AF00E0B18D /* AppDelegate.swift in Sources */,
+				CD5ACFEA290007550037BC18 /* MusicRankMotherCell.swift in Sources */,
 				CDE17B6328FDCFEB00A41F92 /* MusicModel.swift in Sources */,
 				CD87152E28FC67AF00E0B18D /* SceneDelegate.swift in Sources */,
 				CDE17B5F28FD96FA00A41F92 /* HeaderView.swift in Sources */,

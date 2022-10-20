@@ -8,6 +8,12 @@
 import UIKit
 
 struct Music: Hashable {
+    var id = UUID()
+    var musicDetail: [MusicDetail]
+}
+
+struct MusicDetail: Hashable {
+    let id = UUID()
     let title: String
     let artist: String
     let image: UIImage?
