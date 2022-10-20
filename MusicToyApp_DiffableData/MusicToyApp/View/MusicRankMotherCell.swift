@@ -11,46 +11,64 @@ class MusicRankMotherCell: UICollectionViewCell {
 
     @IBOutlet weak var musicRankCollectionView: UICollectionView!
     
-    var music: Music?
+//    var music: Music?
+    var musicDetail: [MusicDetail] = []
+    
+    enum Section: CaseIterable {
+        case main
+    }
+    
+    var dataSource: UICollectionViewDiffableDataSource<Section, MusicDetail>!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        setupCollectionView()
     }
     
     func setupCollectionView() {
         self.musicRankCollectionView.register(UINib(nibName: "MusicRankCell", bundle: nil), forCellWithReuseIdentifier: "MusicRankCell")
-        musicRankCollectionView.dataSource = self
-        musicRankCollectionView.delegate = self
+        musicRankCollectionView.collectionViewLayout = layout()
+        musicRankCollectionView.isScrollEnabled = false
+        
+        constraintCollectionView()
+        configureDataSource()
+        snapshot()
+    }
+    
+    func constraintCollectionView() {
+        musicRankCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        musicRankCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        musicRankCollectionView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        musicRankCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        musicRankCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
 
     func layout() -> UICollectionViewCompositionalLayout {
         
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2), heightDimension: .fractionalHeight(1))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.2))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 5)
         let section = NSCollectionLayoutSection(group: group)
+        
         return UICollectionViewCompositionalLayout(section: section)
     }
-}
-
-extension MusicRankMotherCell: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let safeData = music else { return 0 }
-        return safeData.musicDetail.count
+    
+    func configureDataSource() {
+        self.dataSource = UICollectionViewDiffableDataSource<Section, MusicDetail>(collectionView: musicRankCollectionView, cellProvider: { collectionView, indexPath, item in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MusicRankCell", for: indexPath) as? MusicRankCell else { return UICollectionViewCell() }
+            cell.music = item
+            cell.configure()
+            
+            return cell
+        })
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = musicRankCollectionView.dequeueReusableCell(withReuseIdentifier: "MusicRankCell", for: indexPath) as? MusicRankCell else { return UICollectionViewCell() }
-        let safeData = music!
-        cell.music = safeData.musicDetail[indexPath.row]
-        cell.configure()
-        
-        return cell
+    func snapshot() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, MusicDetail>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(musicDetail, toSection: .main)
+        dataSource.apply(snapshot)
     }
-}
-
-extension MusicRankMotherCell: UICollectionViewDelegate {
-    
 }

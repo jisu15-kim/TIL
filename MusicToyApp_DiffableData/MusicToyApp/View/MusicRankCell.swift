@@ -17,13 +17,17 @@ class MusicRankCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func configure() {
-        musicImage.image = music?.image
-        musicArtist.text = music?.artist
-        musicArtist.text = music?.title
+        guard let safeData = music else { return }
+
+        musicImage.image = safeData.image
+        musicArtist.text = safeData.artist
+        musicImage.layer.cornerRadius = 10
+        musicTitle.text = safeData.title
+        musicTitle.textColor = .white
+        musicArtist.contentMode = .scaleAspectFill
     }
 
 }

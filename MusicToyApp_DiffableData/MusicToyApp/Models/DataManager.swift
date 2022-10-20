@@ -52,11 +52,10 @@ class DataManager {
             MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music14")),
             MusicDetail(title: "TeseTitle", artist: "Jisu Kim", image: UIImage(named: "Music15"))
        ]
-        music.append(Music(musicDetail: musicDetail))
     }
     
-    public func getMusicData() -> [Music] {
+    public func getMusicData() -> [MusicDetail] {
         fetchMusicData()
-        return music
+        return musicDetail
     }
 }

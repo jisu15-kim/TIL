@@ -10,15 +10,16 @@ import UIKit
 final class HeaderView: UICollectionReusableView {
 
     let label = UILabel()
+    let button = UIButton(type: .system)
+
     private let stackView = UIStackView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        label.text = "새로운 아티스트"
+//        label.text = "새로운 아티스트"
         addSubview(stackView)
         stackView.addArrangedSubview(label)
-        let button = UIButton(type: .system)
-        button.setTitle("더보기", for: .normal)
+//        button.setTitle("더보기", for: .normal)
         button.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         stackView.addArrangedSubview(button)
         label.textColor = .white
