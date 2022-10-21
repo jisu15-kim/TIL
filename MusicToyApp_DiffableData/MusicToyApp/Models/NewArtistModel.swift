@@ -8,7 +8,3 @@
 import UIKit
 
 
-struct NewArtist: Hashable {
-    let name: String
-    let image: UIImage
-}
