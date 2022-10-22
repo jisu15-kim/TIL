@@ -33,9 +33,9 @@ final class ViewController: UIViewController {
     private var playList: [PlayList] = []
     private let dataManager = DataManager()
     
-
+    
     // MARK: -함수
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupData()
@@ -61,7 +61,7 @@ final class ViewController: UIViewController {
         mainCollectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
         //        mainCollectionView.alwaysBounceVertical = false
         mainCollectionView.collectionViewLayout = collectionViewLayout()
-        
+        mainCollectionView.delegate = self
         configureDataSource()
         header()
         makeSnapshot()
@@ -139,8 +139,9 @@ final class ViewController: UIViewController {
         
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = 20
+        
         return UICollectionViewCompositionalLayout(sectionProvider: { sectionNumber, env in
-
+            
             if sectionNumber == 0 {
                 let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(1)))
                 //        item.contentInsets = .init(top: 0, leading: 5, bottom: 16, trailing: 5)
@@ -179,3 +180,24 @@ final class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("\(indexPath)가 눌렸다") // [섹션, item] 가 눌렸다
+        print("\(indexPath.section)가 눌렸다") // [섹션, item] 가 눌렸다
+        switch indexPath.section {
+        case 0:
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ArtistDetailViewController") as? ArtistDetailViewController else { return }
+            vc.newArtist = newArtist[indexPath.item]
+            self.navigationController?.pushViewController(vc, animated: true)
+        
+        case 1:
+            return
+            
+        case 2:
+            return            
+            
+        default:
+            return
+        }
+    }
+}

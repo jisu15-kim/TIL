@@ -17,6 +17,7 @@
 		CD87153328FC67AF00E0B18D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD87153128FC67AF00E0B18D /* Main.storyboard */; };
 		CD87153528FC67B000E0B18D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD87153428FC67B000E0B18D /* Assets.xcassets */; };
 		CD87153828FC67B000E0B18D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD87153628FC67B000E0B18D /* LaunchScreen.storyboard */; };
+		CD973D642903EADF00960FC1 /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD973D632903EADF00960FC1 /* ArtistDetailViewController.swift */; };
 		CDE17B5F28FD96FA00A41F92 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE17B5E28FD96FA00A41F92 /* HeaderView.swift */; };
 		CDE17B6128FDAA0800A41F92 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE17B6028FDAA0800A41F92 /* ArtistCell.swift */; };
 		CDE17B6328FDCFEB00A41F92 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE17B6228FDCFEB00A41F92 /* DataModel.swift */; };
@@ -37,6 +38,7 @@
 		CD87153428FC67B000E0B18D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD87153728FC67B000E0B18D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD87153928FC67B000E0B18D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD973D632903EADF00960FC1 /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
 		CDE17B5E28FD96FA00A41F92 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		CDE17B6028FDAA0800A41F92 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 		CDE17B6228FDCFEB00A41F92 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				CD87152F28FC67AF00E0B18D /* ViewController.swift */,
+				CD973D632903EADF00960FC1 /* ArtistDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				CD87153028FC67AF00E0B18D /* ViewController.swift in Sources */,
 				CD83AFBF28FC6B8400BB4B94 /* DataManager.swift in Sources */,
 				CDE17B6128FDAA0800A41F92 /* ArtistCell.swift in Sources */,
+				CD973D642903EADF00960FC1 /* ArtistDetailViewController.swift in Sources */,
 				CDE17B6628FDD1FA00A41F92 /* MusicRankCell.swift in Sources */,
 				CD83AFBD28FC6B4F00BB4B94 /* NewArtistModel.swift in Sources */,
 				CD87152C28FC67AF00E0B18D /* AppDelegate.swift in Sources */,

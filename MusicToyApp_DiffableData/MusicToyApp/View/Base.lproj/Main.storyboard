@@ -87,6 +87,55 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="107.8125"/>
         </scene>
+        <!--Artist Detail View Controller-->
+        <scene sceneID="FFm-0d-atH">
+            <objects>
+                <viewController storyboardIdentifier="ArtistDetailViewController" id="L8r-dm-8L4" customClass="ArtistDetailViewController" customModule="MusicToyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z5l-et-vA3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="yYP-X4-qTe">
+                                <rect key="frame" x="53.5" y="278" width="307" height="350"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oog-zz-H2k">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="5VH-Ef-Hpf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Or7-QP-bYL">
+                                        <rect key="frame" x="0.0" y="300" width="307" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="8VM-u4-AuF"/>
+                                    <constraint firstItem="oog-zz-H2k" firstAttribute="leading" secondItem="yYP-X4-qTe" secondAttribute="leadingMargin" id="EmV-Tw-nEc"/>
+                                    <constraint firstAttribute="height" constant="350" id="GjM-ka-EiG"/>
+                                    <constraint firstItem="Or7-QP-bYL" firstAttribute="leading" secondItem="oog-zz-H2k" secondAttribute="leading" id="V7t-AR-fz1"/>
+                                    <constraint firstItem="Or7-QP-bYL" firstAttribute="trailing" secondItem="oog-zz-H2k" secondAttribute="trailing" id="h2z-Bb-W5b"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RVK-3Q-ftF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yYP-X4-qTe" firstAttribute="centerX" secondItem="RVK-3Q-ftF" secondAttribute="centerX" id="n2V-gK-FIv"/>
+                            <constraint firstItem="yYP-X4-qTe" firstAttribute="centerY" secondItem="RVK-3Q-ftF" secondAttribute="centerY" id="wnd-YT-iSn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="artistImage" destination="oog-zz-H2k" id="kNy-yj-rwF"/>
+                        <outlet property="artistName" destination="Or7-QP-bYL" id="Ud4-aI-wXt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oeU-AA-pAR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952" y="108"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="E3p-KO-FVO">
             <objects>
