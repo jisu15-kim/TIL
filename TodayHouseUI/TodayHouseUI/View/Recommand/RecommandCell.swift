@@ -39,9 +39,20 @@ class RecommandCell: UITableViewCell {
     func setupCollectionView() {
         recommandCollectionView.register(UINib(nibName: "RecommandDetailCell", bundle: nil), forCellWithReuseIdentifier: "RecommandDetailCell")
         recommandCollectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionHeaderView")
+//        setupConstraint()
+
         recommandCollectionView.dataSource = self
         recommandCollectionView.delegate = self
     }
+    
+//    func setupConstraint() {
+//        let height = contentView.bounds.width * 2 + 100
+//        recommandCollectionView.translatesAutoresizingMaskIntoConstraints = false
+//        recommandCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+//        recommandCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+//        recommandCollectionView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+//        recommandCollectionView.heightAnchor.constraint(equalToConstant: height).isActive = true
+//    }
 }
 
 extension RecommandCell: UICollectionViewDataSource {

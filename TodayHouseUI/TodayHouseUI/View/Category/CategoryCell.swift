@@ -38,20 +38,22 @@ class CategoryCell: UITableViewCell {
     
     func setupCollectionView() {
         categoryCollectionView.register(UINib(nibName: "CategoryDetailCell", bundle: nil), forCellWithReuseIdentifier: "CategoryDetailCell")
-        collectionViewConstraint()
         categoryCollectionView.dataSource = self
         categoryCollectionView.delegate = self
         categoryCollectionView.collectionViewLayout = gridFlowLayout
         categoryCollectionView.showsHorizontalScrollIndicator = false
         categoryCollectionView.showsVerticalScrollIndicator = false
+        collectionViewConstraint()
+
     }
     
     func collectionViewConstraint() {
-        categoryCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        categoryCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
-        categoryCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
-        categoryCollectionView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        categoryCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
+        self.categoryCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.categoryCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
+        self.categoryCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10).isActive = true
+        self.categoryCollectionView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        self.categoryCollectionView.heightAnchor.constraint(equalToConstant: 240).isActive = true
     }
 }
 

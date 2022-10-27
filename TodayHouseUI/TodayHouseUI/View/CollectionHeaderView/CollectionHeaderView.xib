@@ -15,16 +15,16 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pt9-1z-O5N">
-                    <rect key="frame" x="0.0" y="64" width="320" height="39"/>
+                    <rect key="frame" x="0.0" y="64" width="320" height="43.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awsound님 추천" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzg-VN-jog">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="19.5"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="24"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오옹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqF-IJ-VmL">
-                            <rect key="frame" x="0.0" y="24.5" width="320" height="14.5"/>
+                            <rect key="frame" x="0.0" y="29" width="320" height="14.5"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

@@ -43,7 +43,14 @@ class DataManager {
         Recommandation(image: UIImage(named: "Rec04"), description: "거실, 침실, 작업실 그리고 드레스룸까지 있는 1.5룸")
         ]
         
-        mainModel = MainModel(ad: ad, category: category, recommandation: rec)
+        let tips = [
+        Tips(image: UIImage(named: "Tips01"), description: "침대 배치에 따라 달라지는 침실 분위기 3"),
+        Tips(image: UIImage(named: "Tips02"), description: "키보드에만 100만원 슨 매니아의 추천 6 ⌨️"),
+        Tips(image: UIImage(named: "Tips03"), description: "SNS에서 보던 예쁜 키보드, 어떻게 만드는 걸까? ⌨️"),
+        Tips(image: UIImage(named: "Tips04"), description: "몇 번을 사도 다시 살, 만족도 💯 내돈내산 살림잇템 8")
+        ]
+        
+        mainModel = MainModel(ad: ad, category: category, recommandation: rec, tips: tips)
     }
     
     public func getData() -> MainModel? {

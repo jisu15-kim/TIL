@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD2C3E24290AB4C200799A0A /* ViewMoreButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C3E23290AB4C200799A0A /* ViewMoreButtonCell.swift */; };
+		CD2C3E27290AC6C400799A0A /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C3E26290AC6C400799A0A /* TipsCell.swift */; };
 		CD934799290570D2008EF698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD934798290570D2008EF698 /* AppDelegate.swift */; };
 		CD93479B290570D2008EF698 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93479A290570D2008EF698 /* SceneDelegate.swift */; };
 		CD93479D290570D2008EF698 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93479C290570D2008EF698 /* MainViewController.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD2C3E23290AB4C200799A0A /* ViewMoreButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMoreButtonCell.swift; sourceTree = "<group>"; };
+		CD2C3E26290AC6C400799A0A /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 		CD934795290570D2008EF698 /* TodayHouseUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayHouseUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD934798290570D2008EF698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD93479A290570D2008EF698 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD2C3E25290AC56D00799A0A /* ViewMoreButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD2C3E23290AB4C200799A0A /* ViewMoreButtonCell.swift */,
+			);
+			path = ViewMoreButtonCell;
+			sourceTree = "<group>";
+		};
+		CD2C3E28290AC6C800799A0A /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				CD2C3E26290AC6C400799A0A /* TipsCell.swift */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
 		CD93478C290570D2008EF698 = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +137,10 @@
 				CD93479E290570D2008EF698 /* Main.storyboard */,
 				CDC5B434290980F700FD2DA4 /* CollectionHeaderView */,
 				CDC5B42F290980A500FD2DA4 /* Recommand */,
+				CD2C3E28290AC6C800799A0A /* Tips */,
 				CDC5B4252909776500FD2DA4 /* Category */,
 				CDC5B4262909776E00FD2DA4 /* AD */,
+				CD2C3E25290AC56D00799A0A /* ViewMoreButtonCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,12 +283,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC5B4292909785D00FD2DA4 /* RecommandCell.swift in Sources */,
+				CD2C3E27290AC6C400799A0A /* TipsCell.swift in Sources */,
 				CD9347C529059074008EF698 /* GridCollectionViewFlowLayout.swift in Sources */,
 				CD9347B029057330008EF698 /* MainModel.swift in Sources */,
 				CD9347B22905741E008EF698 /* DataManager.swift in Sources */,
 				CD9347B529057FA2008EF698 /* ADCell.swift in Sources */,
 				CD9347B9290582AA008EF698 /* CategoryCell.swift in Sources */,
 				CD9347BD2905858A008EF698 /* CategoryDetailCell.swift in Sources */,
+				CD2C3E24290AB4C200799A0A /* ViewMoreButtonCell.swift in Sources */,
 				CDC5B432290980EF00FD2DA4 /* CollectionHeaderView.swift in Sources */,
 				CD93479D290570D2008EF698 /* MainViewController.swift in Sources */,
 				CD934799290570D2008EF698 /* AppDelegate.swift in Sources */,

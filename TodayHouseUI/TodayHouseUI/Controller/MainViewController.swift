@@ -12,6 +12,7 @@ final class MainViewController: UIViewController {
     private var mainModel: MainModel?
     private let dataManager = DataManager()
     
+    @IBOutlet weak var mainSearchBar: UISearchBar!
     @IBOutlet weak var mainTableView: UITableView!
     
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ final class MainViewController: UIViewController {
         
         setupData()
         setupTableView()
+        setupSearchBar()
     }
     
     private func setupData() {
@@ -29,16 +31,25 @@ final class MainViewController: UIViewController {
         mainTableView.register(UINib(nibName: "ADCell", bundle: nil), forCellReuseIdentifier: "ADCell")
         mainTableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: "CategoryCell")
         mainTableView.register(UINib(nibName: "RecommandCell", bundle: nil), forCellReuseIdentifier: "RecommandCell")
+        mainTableView.register(ViewMoreButtonCell.self, forCellReuseIdentifier: "ViewMoreButtonCell")
+        mainTableView.register(TipsCell.self, forCellReuseIdentifier: "TipsCell")
         mainTableView.delegate = self
         mainTableView.dataSource = self
         //        mainTableView.sectionHeaderHeight = 20
+    }
+    
+    private func setupSearchBar() {
+        mainSearchBar.delegate = self
+        mainSearchBar.placeholder = "오늘의집 통합검색"
+        mainSearchBar.searchBarStyle = .minimal
+        mainSearchBar.barTintColor = .systemGray6
     }
 }
 
 
 extension MainViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,6 +57,8 @@ extension MainViewController: UITableViewDataSource {
         case 0:
             return 2
         case 1:
+            return 2
+        case 2:
             return 1
         default:
             return 0
@@ -71,17 +84,31 @@ extension MainViewController: UITableViewDataSource {
                 return UITableViewCell()
             }
         case 1:
-            guard let cell = mainTableView.dequeueReusableCell(withIdentifier: "RecommandCell") as? RecommandCell else { return UITableViewCell()}
-            cell.recommandation = mainModel?.recommandation
-            cell.setupCollectionView()
-            return cell
-            
+            switch indexPath.row {
+            case 0:
+                guard let cell = mainTableView.dequeueReusableCell(withIdentifier: "RecommandCell") as? RecommandCell else { return UITableViewCell() }
+                cell.recommandation = mainModel?.recommandation
+                cell.setupCollectionView()
+                return cell
+            case 1:
+                guard let cell = mainTableView.dequeueReusableCell(withIdentifier: "ViewMoreButtonCell") as? ViewMoreButtonCell else { return UITableViewCell() }
+                return cell
+            default:
+                return UITableViewCell()
+            }
+        case 2:
+            switch indexPath.row {
+            case 0:
+                guard let cell = mainTableView.dequeueReusableCell(withIdentifier: "TipsCell") as? TipsCell else { return UITableViewCell() }
+                cell.tips = mainModel?.tips
+                return cell
+            default:
+                return UITableViewCell()
+            }
         default:
             return UITableViewCell()
         }
     }
-    
-    
 }
 
 extension MainViewController: UITableViewDelegate {
@@ -106,9 +133,29 @@ extension MainViewController: UITableViewDelegate {
                 return UITableView.automaticDimension
             }
         case 1:
-            return 650
+            switch indexPath.row {
+            case 0:
+                return 600
+            case 1:
+                return 60
+            default:
+                return 0
+            }
+        case 2:
+            switch indexPath.row {
+            case 0:
+                return 600
+            case 1:
+                return 60
+            default:
+                return 0
+            }
         default:
             return UITableView.automaticDimension
         }
     }
+}
+
+extension MainViewController: UISearchBarDelegate {
+    
 }

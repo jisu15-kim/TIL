@@ -16,6 +16,7 @@ struct MainModel {
     var ad: [AD]
     var category: [Category]
     var recommandation: [Recommandation]
+    var tips: [Tips]
 }
 
 struct AD {
@@ -28,6 +29,11 @@ struct Category {
 }
 
 struct Recommandation {
+    var image: UIImage?
+    var description: String
+}
+
+struct Tips {
     var image: UIImage?
     var description: String
 }

@@ -30,10 +30,10 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="dVf-QQ-s0L" secondAttribute="bottom" id="29x-xC-rjm"/>
-                    <constraint firstItem="dVf-QQ-s0L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="X6n-Xo-fwA"/>
-                    <constraint firstItem="dVf-QQ-s0L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="a1N-9p-dVr"/>
-                    <constraint firstAttribute="trailing" secondItem="dVf-QQ-s0L" secondAttribute="trailing" id="drv-aq-wIW"/>
+                    <constraint firstAttribute="bottom" secondItem="dVf-QQ-s0L" secondAttribute="bottom" id="Cdn-9Z-enV"/>
+                    <constraint firstAttribute="trailing" secondItem="dVf-QQ-s0L" secondAttribute="trailing" id="III-4n-wXw"/>
+                    <constraint firstItem="dVf-QQ-s0L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fU6-yn-fwB"/>
+                    <constraint firstItem="dVf-QQ-s0L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oBP-Vh-7I4"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

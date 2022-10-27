@@ -38,7 +38,12 @@ class ADCell: UITableViewCell {
         adCollectionView.isPagingEnabled = true
         adCollectionView.showsVerticalScrollIndicator = false
         adCollectionView.showsHorizontalScrollIndicator = false
-        
+        setupConstraint()
+    }
+    
+    func setupConstraint() {
+        adCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        adCollectionView.heightAnchor.constraint(equalToConstant: 150).isActive = true
     }
 }
 
