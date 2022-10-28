@@ -59,7 +59,7 @@ extension MainViewController: UITableViewDataSource {
         case 1:
             return 2
         case 2:
-            return 1
+            return 2
         default:
             return 0
         }
@@ -101,6 +101,9 @@ extension MainViewController: UITableViewDataSource {
             case 0:
                 guard let cell = mainTableView.dequeueReusableCell(withIdentifier: "TipsCell") as? TipsCell else { return UITableViewCell() }
                 cell.tips = mainModel?.tips
+                return cell
+            case 1:
+                guard let cell = mainTableView.dequeueReusableCell(withIdentifier: "ViewMoreButtonCell") as? ViewMoreButtonCell else { return UITableViewCell() }
                 return cell
             default:
                 return UITableViewCell()
