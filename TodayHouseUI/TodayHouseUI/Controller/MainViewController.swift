@@ -33,6 +33,7 @@ final class MainViewController: UIViewController {
         mainTableView.register(UINib(nibName: "RecommandCell", bundle: nil), forCellReuseIdentifier: "RecommandCell")
         mainTableView.register(ViewMoreButtonCell.self, forCellReuseIdentifier: "ViewMoreButtonCell")
         mainTableView.register(TipsCell.self, forCellReuseIdentifier: "TipsCell")
+        mainTableView.register(FindCell.self, forCellReuseIdentifier: "FindCell")
         mainTableView.delegate = self
         mainTableView.dataSource = self
         //        mainTableView.sectionHeaderHeight = 20
@@ -49,7 +50,7 @@ final class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,6 +61,8 @@ extension MainViewController: UITableViewDataSource {
             return 2
         case 2:
             return 2
+        case 3:
+            return 1
         default:
             return 0
         }
@@ -104,6 +107,15 @@ extension MainViewController: UITableViewDataSource {
                 return cell
             case 1:
                 guard let cell = mainTableView.dequeueReusableCell(withIdentifier: "ViewMoreButtonCell") as? ViewMoreButtonCell else { return UITableViewCell() }
+                return cell
+            default:
+                return UITableViewCell()
+            }
+        case 3:
+            switch indexPath.row {
+            case 0:
+                guard let cell = mainTableView.dequeueReusableCell(withIdentifier: "FindCell") as? FindCell else { return UITableViewCell() }
+                cell.find = mainModel!.find
                 return cell
             default:
                 return UITableViewCell()
@@ -153,6 +165,8 @@ extension MainViewController: UITableViewDelegate {
             default:
                 return 0
             }
+        case 3:
+            return 150
         default:
             return UITableView.automaticDimension
         }

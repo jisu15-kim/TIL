@@ -7,16 +7,12 @@
 
 import UIKit
 
-enum CellType: String {
-    case adCategory
-    case Recommadation
-}
-
 struct MainModel {
     var ad: [AD]
     var category: [Category]
     var recommandation: [Recommandation]
     var tips: [Tips]
+    var find: [Find]
 }
 
 struct AD {
@@ -36,4 +32,9 @@ struct Recommandation {
 struct Tips {
     var image: UIImage?
     var description: String
+}
+
+struct Find {
+    var image: UIImage?
+    var title: String
 }

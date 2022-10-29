@@ -9,14 +9,6 @@ import UIKit
 
 class TipsCell: UITableViewCell {
     
-    var collectionViewLayout: UICollectionViewFlowLayout?
-//    let tipsCollectionView: UICollectionView! = {
-//        let flow = UICollectionViewFlowLayout()
-//        flow.itemSize = CGSize(width: 100, height: 100)
-//        let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: flow)
-//        cv.backgroundColor = .red
-//        return cv
-//    }()
     var tipsCollectionView: UICollectionView?
     
     var tips: [Tips]?
@@ -63,8 +55,7 @@ class TipsCell: UITableViewCell {
             self.tipsCollectionView!.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             self.tipsCollectionView!.rightAnchor.constraint(equalTo: contentView.rightAnchor),
         ])
-//        self.tipsCollectionView?.backgroundColor =
-
+        
     }
     
     func setupCollectionView() {

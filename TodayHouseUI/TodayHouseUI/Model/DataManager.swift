@@ -50,7 +50,21 @@ class DataManager {
         Tips(image: UIImage(named: "Tips04"), description: "몇 번을 사도 다시 살, 만족도 💯 내돈내산 살림잇템 8")
         ]
         
-        mainModel = MainModel(ad: ad, category: category, recommandation: rec, tips: tips)
+        let find = [
+        Find(image: UIImage(named: "find01"), title: "쇼파"),
+        Find(image: UIImage(named: "find02"), title: "캠핑용품"),
+        Find(image: UIImage(named: "find03"), title: "실내운동"),
+        Find(image: UIImage(named: "find04"), title: "반려동물"),
+        Find(image: UIImage(named: "find05"), title: "유아용품"),
+        Find(image: UIImage(named: "find06"), title: "생필품"),
+        Find(image: UIImage(named: "find07"), title: "수납용품"),
+        Find(image: UIImage(named: "find08"), title: "식물"),
+        Find(image: UIImage(named: "find09"), title: "주방용품"),
+        Find(image: UIImage(named: "find10"), title: "냉장고"),
+        Find(image: UIImage(named: "find11"), title: "침대")
+        ]
+        
+        mainModel = MainModel(ad: ad, category: category, recommandation: rec, tips: tips, find: find)
     }
     
     public func getData() -> MainModel? {
