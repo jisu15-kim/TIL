@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xap-Ct-pdX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yA6-EA-zch">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,25 +16,80 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzp-m1-fSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541" y="65"/>
+            <point key="canvasLocation" x="2113.0434782608695" y="64.955357142857139"/>
+        </scene>
+        <!--Main View-->
+        <scene sceneID="kjv-tg-gf0">
+            <objects>
+                <viewController id="2HC-GL-Obp" customClass="MainViewController" customModule="ScrollableSegmentControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rsn-aH-Apv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11D-8P-3dc">
+                                <rect key="frame" x="0.0" y="136" width="414" height="737"/>
+                                <connections>
+                                    <segue destination="ill-IK-wbW" kind="embed" id="pJN-4R-xXu"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3fj-OB-2Rz">
+                                <rect key="frame" x="0.0" y="98" width="414" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0Ao-X7-3AM"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="2HC-GL-Obp" eventType="valueChanged" id="UAX-iI-x3Q"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tD8-0g-49D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tD8-0g-49D" firstAttribute="bottom" secondItem="11D-8P-3dc" secondAttribute="bottom" id="GUV-Jq-NQM"/>
+                            <constraint firstItem="tD8-0g-49D" firstAttribute="trailing" secondItem="11D-8P-3dc" secondAttribute="trailing" id="I7p-7R-SBN"/>
+                            <constraint firstItem="3fj-OB-2Rz" firstAttribute="leading" secondItem="tD8-0g-49D" secondAttribute="leading" id="Jle-Uy-OPy"/>
+                            <constraint firstItem="3fj-OB-2Rz" firstAttribute="top" secondItem="tD8-0g-49D" secondAttribute="top" constant="10" id="VFz-ib-xlI"/>
+                            <constraint firstItem="11D-8P-3dc" firstAttribute="top" secondItem="3fj-OB-2Rz" secondAttribute="bottom" constant="7" id="VGV-gc-fjR"/>
+                            <constraint firstItem="11D-8P-3dc" firstAttribute="leading" secondItem="tD8-0g-49D" secondAttribute="leading" id="mfs-yk-eh4"/>
+                            <constraint firstItem="tD8-0g-49D" firstAttribute="bottom" secondItem="3fj-OB-2Rz" secondAttribute="bottom" constant="744" id="oGC-tu-QaP"/>
+                            <constraint firstItem="tD8-0g-49D" firstAttribute="trailing" secondItem="3fj-OB-2Rz" secondAttribute="trailing" id="rmS-Sj-IqN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main View" id="lNl-J8-AcV"/>
+                    <connections>
+                        <outlet property="segmentController" destination="3fj-OB-2Rz" id="J1d-iq-lX2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TuG-eC-Svz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1376.8115942028987" y="64.955357142857139"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="3dI-d3-wQx">
+        <scene sceneID="bf8-Qc-h3q">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xap-Ct-pdX" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yA6-EA-zch" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iCi-hk-ARW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jtU-Eh-l3w">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ill-IK-wbW" kind="relationship" relationship="rootViewController" id="DuS-PO-HBX"/>
+                        <segue destination="2HC-GL-Obp" kind="relationship" relationship="rootViewController" id="X8u-vU-HKV"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9zp-9f-K8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLD-NN-MOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-365" y="65"/>
+            <point key="canvasLocation" x="466.66666666666669" y="64.955357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

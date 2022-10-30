@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		CD33AE8D290D729E00BF2C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33AE8C290D729E00BF2C55 /* AppDelegate.swift */; };
 		CD33AE8F290D729E00BF2C55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33AE8E290D729E00BF2C55 /* SceneDelegate.swift */; };
-		CD33AE91290D729E00BF2C55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33AE90290D729E00BF2C55 /* ViewController.swift */; };
+		CD33AE91290D729E00BF2C55 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33AE90290D729E00BF2C55 /* MainViewController.swift */; };
 		CD33AE94290D729E00BF2C55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD33AE92290D729E00BF2C55 /* Main.storyboard */; };
 		CD33AE96290D729E00BF2C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD33AE95290D729E00BF2C55 /* Assets.xcassets */; };
 		CD33AE99290D729E00BF2C55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD33AE97290D729E00BF2C55 /* LaunchScreen.storyboard */; };
 		CD33AEA1290D72B200BF2C55 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33AEA0290D72B200BF2C55 /* PageViewController.swift */; };
+		CDC935B4290E6AFD009BA2D4 /* CustomNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC935B3290E6AFD009BA2D4 /* CustomNotificationCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD33AE89290D729E00BF2C55 /* ScrollableSegmentControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollableSegmentControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD33AE8C290D729E00BF2C55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD33AE8E290D729E00BF2C55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CD33AE90290D729E00BF2C55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD33AE90290D729E00BF2C55 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CD33AE93290D729E00BF2C55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD33AE95290D729E00BF2C55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD33AE98290D729E00BF2C55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD33AE9A290D729E00BF2C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD33AEA0290D72B200BF2C55 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		CDC935B3290E6AFD009BA2D4 /* CustomNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotificationCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +62,10 @@
 			children = (
 				CD33AE8C290D729E00BF2C55 /* AppDelegate.swift */,
 				CD33AE8E290D729E00BF2C55 /* SceneDelegate.swift */,
-				CD33AE90290D729E00BF2C55 /* ViewController.swift */,
-				CD33AE92290D729E00BF2C55 /* Main.storyboard */,
+				CDC935B3290E6AFD009BA2D4 /* CustomNotificationCenter.swift */,
+				CD33AE90290D729E00BF2C55 /* MainViewController.swift */,
 				CD33AEA0290D72B200BF2C55 /* PageViewController.swift */,
+				CD33AE92290D729E00BF2C55 /* Main.storyboard */,
 				CD33AE95290D729E00BF2C55 /* Assets.xcassets */,
 				CD33AE97290D729E00BF2C55 /* LaunchScreen.storyboard */,
 				CD33AE9A290D729E00BF2C55 /* Info.plist */,
@@ -141,8 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD33AE91290D729E00BF2C55 /* ViewController.swift in Sources */,
+				CD33AE91290D729E00BF2C55 /* MainViewController.swift in Sources */,
 				CD33AE8D290D729E00BF2C55 /* AppDelegate.swift in Sources */,
+				CDC935B4290E6AFD009BA2D4 /* CustomNotificationCenter.swift in Sources */,
 				CD33AE8F290D729E00BF2C55 /* SceneDelegate.swift in Sources */,
 				CD33AEA1290D72B200BF2C55 /* PageViewController.swift in Sources */,
 			);
