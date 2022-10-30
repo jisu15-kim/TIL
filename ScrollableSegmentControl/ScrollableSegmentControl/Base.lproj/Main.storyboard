@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xap-Ct-pdX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--부모뷰-->
+        <scene sceneID="8ON-iL-F8f">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" title="부모뷰" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ill-IK-wbW" customClass="PageViewController" customModule="ScrollableSegmentControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="부모뷰" id="VKr-NZ-4BE"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yzp-m1-fSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="65"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3dI-d3-wQx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xap-Ct-pdX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iCi-hk-ARW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ill-IK-wbW" kind="relationship" relationship="rootViewController" id="DuS-PO-HBX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9zp-9f-K8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365" y="65"/>
+        </scene>
+    </scenes>
+</document>
