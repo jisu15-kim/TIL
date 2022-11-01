@@ -21,6 +21,7 @@ final class MainViewController: UIViewController {
         setupData()
         setupTableView()
         setupSearchBar()
+        title = "Main"
     }
     
     private func setupData() {
@@ -134,7 +135,7 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat.leastNormalMagnitude
     }
-
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
@@ -174,5 +175,14 @@ extension MainViewController: UITableViewDelegate {
 }
 
 extension MainViewController: UISearchBarDelegate {
-    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        print("Search바가 눌렸다")
+        
+        let vc = SearchViewController()
+        vc.modalTransitionStyle = .coverVertical
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+        
+        return false
+    }
 }

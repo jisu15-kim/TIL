@@ -10,7 +10,9 @@ import UIKit
 
 class DataManager {
     
-    var mainModel: MainModel?
+    private var mainModel: MainModel?
+    private var dataList: [String] = []
+    private var integratedVcData: [IntegratedVcData] = []
     
     private func fetchData() {
         
@@ -67,9 +69,45 @@ class DataManager {
         mainModel = MainModel(ad: ad, category: category, recommandation: rec, tips: tips, find: find)
     }
     
+    private func fetchCategoryData() {
+        dataList = ["통합", "사진", "집들이", "노하우", "스토어", "질문과답변", "시공업체", "유저"]
+    }
+    
     public func getData() -> MainModel? {
         fetchData()
         return mainModel
     }
     
+    public func getCategoryData() -> [String] {
+        fetchCategoryData()
+        return dataList
+    }
+    
+    private func fetchIntegratedVCData() {
+        integratedVcData = [
+            IntegratedVcData(title: "인센스 홀더", type: .hot),
+            IntegratedVcData(title: "카페 의자", type: .hot),
+            IntegratedVcData(title: "인테리어 소품", type: .hot),
+            IntegratedVcData(title: "구이바다", type: .hot),
+            IntegratedVcData(title: "샤브샤브냄비", type: .hot),
+            IntegratedVcData(title: "크롬캐스트", type: .hot),
+            IntegratedVcData(title: "콘센트 가리개", type: .hot),
+            IntegratedVcData(title: "템바보드", type: .hot),
+            IntegratedVcData(title: "키보드", type: .hot),
+            IntegratedVcData(title: "금고", type: .hot),
+            
+            IntegratedVcData(image: UIImage(named: "find01"), title: "유아・아동", description: nil, type: .categoryFind),
+            IntegratedVcData(image: UIImage(named: "find02"), title: "반려동물", description: nil, type: .categoryFind),
+            IntegratedVcData(image: UIImage(named: "find03"), title: "실내운동", description: nil, type: .categoryFind),
+            IntegratedVcData(image: UIImage(named: "find04"), title: "캠핑용품", description: nil, type: .categoryFind),
+            IntegratedVcData(image: UIImage(named: "find05"), title: "공구・DIY", description: nil, type: .categoryFind),
+            IntegratedVcData(image: UIImage(named: "find06"), title: "인테리어시공", description: nil, type: .categoryFind),
+            IntegratedVcData(image: UIImage(named: "find07"), title: "렌탈", description: nil, type: .categoryFind)
+        ]
+    }
+    
+    public func getIntegratedVcDataList() -> [IntegratedVcData] {
+        fetchIntegratedVCData()
+        return integratedVcData
+    }
 }
