@@ -115,11 +115,11 @@ class DataManager {
             IntegratedVcData(image: UIImage(named: "area09"), title: "베란다", description: nil, type: .areaFind),
             
             IntegratedVcData(title: "플랜테리어", type: .recommandKeyword),
-            IntegratedVcData(title: "온더테이블", type: .recommandKeyword),
-            IntegratedVcData(title: "데스크테리어", type: .recommandKeyword),
-            IntegratedVcData(title: "제로웨이스트", type: .recommandKeyword),
+            IntegratedVcData(title: "책상", type: .recommandKeyword),
+            IntegratedVcData(title: "에어클라이너", type: .recommandKeyword),
+            IntegratedVcData(title: "청소", type: .recommandKeyword),
             IntegratedVcData(title: "침구교체", type: .recommandKeyword),
-            IntegratedVcData(title: "홈카페", type: .recommandKeyword)
+            IntegratedVcData(title: "스마트전구", type: .recommandKeyword)
         ]
     }
     
