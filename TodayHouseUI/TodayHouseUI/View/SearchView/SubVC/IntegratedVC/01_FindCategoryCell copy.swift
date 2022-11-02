@@ -13,6 +13,34 @@ class FindCategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollec
     var findCategoryData: [IntegratedVcData] = []
     var collectionView: UICollectionView?
     
+    let label: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "카테고리별 상품 찾기"
+        return label
+    }()
+    
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14, weight: .light)
+        label.textColor = .lightGray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    var stackView: UIStackView?
+    
+    func setupStackView() {
+        let stack = UIStackView(arrangedSubviews: [label, descriptionLabel])
+        stack.axis = .horizontal
+        stack.spacing = 10
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        self.stackView = stack
+        
+        addSubview(stackView!)
+    }
+    
     func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -22,7 +50,6 @@ class FindCategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollec
         collectionView?.translatesAutoresizingMaskIntoConstraints = false
         collectionView?.register(FindCategoryDetailCell.self, forCellWithReuseIdentifier: "FindCategoryDetailCell")
         addSubview(collectionView!)
-        collectionView?.register(SearchCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SearchCollectionHeaderView")
         setupConstraints()
         collectionView!.delegate = self
         collectionView!.dataSource = self
@@ -33,37 +60,29 @@ class FindCategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollec
     
     func setupConstraints() {
         guard let collectionView = collectionView else { return }
-
+        let cvHeight = (collectionView.bounds.width - 80) / 4.5
+        
         NSLayoutConstraint.activate([
+            
+            stackView!.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor, constant: 20),
+            stackView!.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor),
+            stackView!.topAnchor.constraint(equalTo: self.topAnchor),
+            stackView!.heightAnchor.constraint(equalToConstant: 50),
+            
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: self.topAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: collectionViewHeight)
-        ])
+            collectionView.topAnchor.constraint(equalTo: stackView!.bottomAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: cvHeight + 40)
+            ])
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return findCategoryData.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        switch kind {
-        case UICollectionView.elementKindSectionHeader:
-            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SearchCollectionHeaderView", for: indexPath) as? SearchCollectionHeaderView else { return UICollectionReusableView() }
-            header.label.text = "카테고리별 상품 찾기"
-            header.descriptionLabel.text = ""
-            header.setupSubView()
-            header.setupConstraints()
-            return header
-        default:
-            return UICollectionReusableView()
-        }
-    }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FindCategoryDetailCell", for: indexPath) as? FindCategoryDetailCell else { return UICollectionViewCell() }
         let data = findCategoryData[indexPath.row]
-        print("Data : \(data)")
         cell.data = data
         cell.setupUI()
         cell.titleLabel.text = data.title
@@ -71,17 +90,12 @@ class FindCategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollec
         
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        let width = collectionView.bounds.width
-        return CGSize(width: width, height: 50)
-    }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let flow = collectionViewLayout as? UICollectionViewFlowLayout else { return CGSize() }
         let width = ((self.collectionView!.bounds.width - flow.minimumInteritemSpacing * 4) - 30) / 4.5
         
-        return CGSize(width: width, height: collectionViewHeight)
+        return CGSize(width: width, height: width + 30)
     }
 }
 
@@ -90,7 +104,7 @@ class FindCategoryDetailCell: UICollectionViewCell {
     
     var image: UIImageView = {
         let image = UIImageView()
-        image.layer.cornerRadius = 30
+        image.layer.cornerRadius = 25
         image.layer.borderWidth = 1
         image.layer.borderColor = UIColor.systemGray5.cgColor
         image.clipsToBounds = true
@@ -101,7 +115,8 @@ class FindCategoryDetailCell: UICollectionViewCell {
     var titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
+        label.textColor = .darkGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

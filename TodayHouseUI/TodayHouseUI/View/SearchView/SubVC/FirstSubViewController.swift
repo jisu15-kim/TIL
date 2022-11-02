@@ -28,6 +28,8 @@ class FirstSubViewController: UIViewController {
         updateViewConstraints()
         collectionView!.register(HotTopicCell.self, forCellWithReuseIdentifier: "HotTopicCell")
         collectionView!.register(FindCategoryCell.self, forCellWithReuseIdentifier: "FindCategoryCell")
+        collectionView!.register(AreaCategoryCell.self, forCellWithReuseIdentifier: "AreaCategoryCell")
+        collectionView!.register(RecommandkeywordCell.self, forCellWithReuseIdentifier: "RecommandkeywordCell")
         collectionView!.delegate = self
         collectionView!.dataSource = self
 //        collectionView!.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: -15)
@@ -47,8 +49,7 @@ class FirstSubViewController: UIViewController {
 
 extension FirstSubViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("count: \(SearchViewCellType.allCases.count)")
-        return 2
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -67,6 +68,25 @@ extension FirstSubViewController: UICollectionViewDataSource, UICollectionViewDe
                 data.type == .categoryFind
             }
             cell.findCategoryData = data
+            cell.setupStackView()
+            cell.setupCollectionView()
+            return cell
+        case 2:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AreaCategoryCell", for: indexPath) as? AreaCategoryCell else { return UICollectionViewCell() }
+            let data = integratedVcDataList.filter { data in
+                data.type == .areaFind
+            }
+            cell.areaCategoryData = data
+            cell.setupStackView()
+            cell.setupCollectionView()
+            return cell
+        case 3:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommandkeywordCell", for: indexPath) as? RecommandkeywordCell else { return UICollectionViewCell() }
+            let data = integratedVcDataList.filter { data in
+                data.type == .recommandKeyword
+            }
+            cell.recommandCategoryData = data
+            cell.setupStackView()
             cell.setupCollectionView()
             return cell
         default:
@@ -78,7 +98,18 @@ extension FirstSubViewController: UICollectionViewDataSource, UICollectionViewDe
 extension FirstSubViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = self.collectionView!.bounds.width
+        switch indexPath.row {
+        case 0:
+            return CGSize(width: width, height: 240)
+        case 1, 2:
+            let height = ((self.collectionView!.bounds.width - 80) / 4.5 + 40) + 50
+            return CGSize(width: width, height: height)
+        case 3:
+            return CGSize(width: width, height: 300)
+        default:
+            return CGSize()
+        }
         
-        return CGSize(width: width, height: 300)
+        
     }
 }

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CD2C3E24290AB4C200799A0A /* ViewMoreButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C3E23290AB4C200799A0A /* ViewMoreButtonCell.swift */; };
 		CD2C3E27290AC6C400799A0A /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C3E26290AC6C400799A0A /* TipsCell.swift */; };
+		CD52EBD72912543300ACCEDB /* DummyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52EBD62912543300ACCEDB /* DummyCell.swift */; };
+		CD52EBD92912623E00ACCEDB /* 01_FindCategoryCell copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52EBD82912623E00ACCEDB /* 01_FindCategoryCell copy.swift */; };
+		CD52EBDB291266AA00ACCEDB /* 03_RecommnadKeywordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52EBDA291266AA00ACCEDB /* 03_RecommnadKeywordCell.swift */; };
 		CD594650290C3AA500868EC3 /* FindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59464F290C3AA500868EC3 /* FindCell.swift */; };
 		CD934799290570D2008EF698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD934798290570D2008EF698 /* AppDelegate.swift */; };
 		CD93479B290570D2008EF698 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93479A290570D2008EF698 /* SceneDelegate.swift */; };
@@ -39,12 +42,15 @@
 		CDC5B433290980EF00FD2DA4 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC5B431290980EF00FD2DA4 /* CollectionHeaderView.xib */; };
 		CDF9C032291176F700532A82 /* 00_HotTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9C031291176F700532A82 /* 00_HotTopicCell.swift */; };
 		CDF9C034291184D100532A82 /* SearchCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9C033291184D100532A82 /* SearchCollectionHeaderView.swift */; };
-		CDF9C03729118C1500532A82 /* 01_FindCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9C03629118C1500532A82 /* 01_FindCategoryCell.swift */; };
+		CDF9C03729118C1500532A82 /* 02_AreaCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9C03629118C1500532A82 /* 02_AreaCategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD2C3E23290AB4C200799A0A /* ViewMoreButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMoreButtonCell.swift; sourceTree = "<group>"; };
 		CD2C3E26290AC6C400799A0A /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
+		CD52EBD62912543300ACCEDB /* DummyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCell.swift; sourceTree = "<group>"; };
+		CD52EBD82912623E00ACCEDB /* 01_FindCategoryCell copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "01_FindCategoryCell copy.swift"; sourceTree = "<group>"; };
+		CD52EBDA291266AA00ACCEDB /* 03_RecommnadKeywordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03_RecommnadKeywordCell.swift; sourceTree = "<group>"; };
 		CD59464F290C3AA500868EC3 /* FindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCell.swift; sourceTree = "<group>"; };
 		CD934795290570D2008EF698 /* TodayHouseUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayHouseUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD934798290570D2008EF698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +83,7 @@
 		CDC5B431290980EF00FD2DA4 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		CDF9C031291176F700532A82 /* 00_HotTopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 00_HotTopicCell.swift; sourceTree = "<group>"; };
 		CDF9C033291184D100532A82 /* SearchCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionHeaderView.swift; sourceTree = "<group>"; };
-		CDF9C03629118C1500532A82 /* 01_FindCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 01_FindCategoryCell.swift; sourceTree = "<group>"; };
+		CDF9C03629118C1500532A82 /* 02_AreaCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 02_AreaCategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,8 +260,11 @@
 		CDF9C03529118B8000532A82 /* IntegratedVC */ = {
 			isa = PBXGroup;
 			children = (
+				CD52EBD62912543300ACCEDB /* DummyCell.swift */,
 				CDF9C031291176F700532A82 /* 00_HotTopicCell.swift */,
-				CDF9C03629118C1500532A82 /* 01_FindCategoryCell.swift */,
+				CD52EBD82912623E00ACCEDB /* 01_FindCategoryCell copy.swift */,
+				CDF9C03629118C1500532A82 /* 02_AreaCategoryCell.swift */,
+				CD52EBDA291266AA00ACCEDB /* 03_RecommnadKeywordCell.swift */,
 			);
 			path = IntegratedVC;
 			sourceTree = "<group>";
@@ -346,16 +355,19 @@
 				CDB617F22910F6FF00A81B75 /* SearchViewController.swift in Sources */,
 				CD9347B029057330008EF698 /* MainModel.swift in Sources */,
 				CDB617F9291119EE00A81B75 /* IntegratedVcData.swift in Sources */,
+				CD52EBDB291266AA00ACCEDB /* 03_RecommnadKeywordCell.swift in Sources */,
 				CDB617F42910F80500A81B75 /* SearchCategoryCell.swift in Sources */,
 				CD9347B22905741E008EF698 /* DataManager.swift in Sources */,
 				CD9347B529057FA2008EF698 /* ADCell.swift in Sources */,
 				CD9347B9290582AA008EF698 /* CategoryCell.swift in Sources */,
 				CD9347BD2905858A008EF698 /* CategoryDetailCell.swift in Sources */,
 				CD2C3E24290AB4C200799A0A /* ViewMoreButtonCell.swift in Sources */,
+				CD52EBD92912623E00ACCEDB /* 01_FindCategoryCell copy.swift in Sources */,
+				CD52EBD72912543300ACCEDB /* DummyCell.swift in Sources */,
 				CDC5B432290980EF00FD2DA4 /* CollectionHeaderView.swift in Sources */,
 				CD594650290C3AA500868EC3 /* FindCell.swift in Sources */,
 				CD93479D290570D2008EF698 /* MainViewController.swift in Sources */,
-				CDF9C03729118C1500532A82 /* 01_FindCategoryCell.swift in Sources */,
+				CDF9C03729118C1500532A82 /* 02_AreaCategoryCell.swift in Sources */,
 				CD934799290570D2008EF698 /* AppDelegate.swift in Sources */,
 				CDC5B42D290978A800FD2DA4 /* RecommandDetailCell.swift in Sources */,
 				CD9347C129058849008EF698 /* ADDetailCell.swift in Sources */,

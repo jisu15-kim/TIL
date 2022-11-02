@@ -18,7 +18,7 @@ class SearchCollectionHeaderView: UICollectionReusableView {
     
     let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14, weight: .light)
+        label.font = UIFont.systemFont(ofSize: 12, weight: .light)
         label.textColor = .lightGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

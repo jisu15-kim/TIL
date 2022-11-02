@@ -102,7 +102,24 @@ class DataManager {
             IntegratedVcData(image: UIImage(named: "find04"), title: "캠핑용품", description: nil, type: .categoryFind),
             IntegratedVcData(image: UIImage(named: "find05"), title: "공구・DIY", description: nil, type: .categoryFind),
             IntegratedVcData(image: UIImage(named: "find06"), title: "인테리어시공", description: nil, type: .categoryFind),
-            IntegratedVcData(image: UIImage(named: "find07"), title: "렌탈", description: nil, type: .categoryFind)
+            IntegratedVcData(image: UIImage(named: "find07"), title: "렌탈", description: nil, type: .categoryFind),
+            
+            IntegratedVcData(image: UIImage(named: "area01"), title: "원룸", description: nil, type: .areaFind),
+            IntegratedVcData(image: UIImage(named: "area02"), title: "거실", description: nil, type: .areaFind),
+            IntegratedVcData(image: UIImage(named: "area03"), title: "침실", description: nil, type: .areaFind),
+            IntegratedVcData(image: UIImage(named: "area04"), title: "주방", description: nil, type: .areaFind),
+            IntegratedVcData(image: UIImage(named: "area05"), title: "욕실", description: nil, type: .areaFind),
+            IntegratedVcData(image: UIImage(named: "area06"), title: "아이방", description: nil, type: .areaFind),
+            IntegratedVcData(image: UIImage(named: "area07"), title: "드레스룸", description: nil, type: .areaFind),
+            IntegratedVcData(image: UIImage(named: "area08"), title: "서재&작업실", description: nil, type: .areaFind),
+            IntegratedVcData(image: UIImage(named: "area09"), title: "베란다", description: nil, type: .areaFind),
+            
+            IntegratedVcData(title: "플랜테리어", type: .recommandKeyword),
+            IntegratedVcData(title: "온더테이블", type: .recommandKeyword),
+            IntegratedVcData(title: "데스크테리어", type: .recommandKeyword),
+            IntegratedVcData(title: "제로웨이스트", type: .recommandKeyword),
+            IntegratedVcData(title: "침구교체", type: .recommandKeyword),
+            IntegratedVcData(title: "홈카페", type: .recommandKeyword)
         ]
     }
     
