@@ -41,6 +41,7 @@ class CategoryCell: UITableViewCell {
         categoryCollectionView.dataSource = self
         categoryCollectionView.delegate = self
         categoryCollectionView.collectionViewLayout = gridFlowLayout
+        categoryCollectionView.isScrollEnabled = false
         categoryCollectionView.showsHorizontalScrollIndicator = false
         categoryCollectionView.showsVerticalScrollIndicator = false
         collectionViewConstraint()
@@ -53,7 +54,11 @@ class CategoryCell: UITableViewCell {
         self.categoryCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
         self.categoryCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10).isActive = true
         self.categoryCollectionView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        self.categoryCollectionView.heightAnchor.constraint(equalToConstant: 240).isActive = true
+        
+        let height = self.bounds.width * 0.7
+//        let height = (((self.bounds.width - 20 - gridFlowLayout.minimumInteritemSpacing * 4) / 5 + 32) * 2) + gridFlowLayout.minimumInteritemSpacing * 2
+        
+        self.categoryCollectionView.heightAnchor.constraint(equalToConstant: height).isActive = true
     }
 }
 
@@ -80,7 +85,8 @@ extension CategoryCell: UICollectionViewDelegateFlowLayout {
 
         guard let flow = collectionViewLayout as? UICollectionViewFlowLayout else { return CGSize() }
         let width = (collectionView.bounds.width - flow.minimumInteritemSpacing * 4) / 5
+        let height = width + 32
 
-        return CGSize(width: width, height: 90)
+        return CGSize(width: width, height: height)
     }
 }

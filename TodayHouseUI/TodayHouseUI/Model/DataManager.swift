@@ -114,12 +114,37 @@ class DataManager {
             IntegratedVcData(image: UIImage(named: "area08"), title: "서재&작업실", description: nil, type: .areaFind),
             IntegratedVcData(image: UIImage(named: "area09"), title: "베란다", description: nil, type: .areaFind),
             
-            IntegratedVcData(title: "플랜테리어", type: .recommandKeyword),
-            IntegratedVcData(title: "책상", type: .recommandKeyword),
-            IntegratedVcData(title: "에어클라이너", type: .recommandKeyword),
-            IntegratedVcData(title: "청소", type: .recommandKeyword),
-            IntegratedVcData(title: "침구교체", type: .recommandKeyword),
-            IntegratedVcData(title: "스마트전구", type: .recommandKeyword)
+            IntegratedVcData(title: "플랜테리어", type: .imageKeyword),
+            IntegratedVcData(title: "책상", type: .imageKeyword),
+            IntegratedVcData(title: "에어클라이너", type: .imageKeyword),
+            IntegratedVcData(title: "청소", type: .imageKeyword),
+            IntegratedVcData(title: "침구교체", type: .imageKeyword),
+            IntegratedVcData(title: "스마트전구", type: .imageKeyword),
+            
+            IntegratedVcData(image: UIImage(named: "houseType01"), title: "원룸&오피스텔", description: nil, type: .houseType),
+            IntegratedVcData(image: UIImage(named: "houseType02"), title: "아파트", description: nil, type: .houseType),
+            IntegratedVcData(image: UIImage(named: "houseType03"), title: "빌라&연립", description: nil, type: .houseType),
+            IntegratedVcData(image: UIImage(named: "houseType04"), title: "단독주택", description: nil, type: .houseType),
+            IntegratedVcData(image: UIImage(named: "houseType05"), title: "싱글라이프", description: nil, type: .houseType),
+            IntegratedVcData(image: UIImage(named: "houseType06"), title: "신혼부부", description: nil, type: .houseType),
+            IntegratedVcData(image: UIImage(named: "houseType07"), title: "아기 있는 집", description: nil, type: .houseType),
+            IntegratedVcData(image: UIImage(named: "houseType08"), title: "부모님과 함께", description: nil, type: .houseType),
+            
+            IntegratedVcData(image: UIImage(named: "guide01"), title: "전셋집 꾸미기 가이드북", description: "지금 이 순간을 가꾸는 100가지 방법", type: .recommandGuideBook),
+            IntegratedVcData(image: UIImage(named: "guide02"), title: "신혼가구 쇼핑가이드북", description: "유부의 경험으로 아끼는 손품과 발품", type: .recommandGuideBook),
+            IntegratedVcData(image: UIImage(named: "guide03"), title: "리모델링 가이드북", description: "치명적 실수 막는 31가지 핵심 노하우", type: .recommandGuideBook),
+            IntegratedVcData(image: UIImage(named: "guide04"), title: "셀프인테리어 가이드북", description: "최소비용으로 도전하는 최고의 변신", type: .recommandGuideBook),
+            
+            IntegratedVcData(title: "원룸 꾸미기", type: .recommandKeyword),
+            IntegratedVcData(title: "수납 노하우", type: .recommandKeyword),
+            IntegratedVcData(title: "욕실 청소", type: .recommandKeyword),
+            IntegratedVcData(title: "커튼 설치", type: .recommandKeyword),
+            IntegratedVcData(title: "내돈내산 제품 리뷰", type: .recommandKeyword),
+            IntegratedVcData(title: "반려동물과 함께", type: .recommandKeyword),
+            IntegratedVcData(title: "아기가 있는 집", type: .recommandKeyword),
+            IntegratedVcData(title: "공간DIY", type: .recommandKeyword),
+            IntegratedVcData(title: "주방 리모델링", type: .recommandKeyword),
+            IntegratedVcData(title: "구매가이드", type: .recommandKeyword),
         ]
     }
     

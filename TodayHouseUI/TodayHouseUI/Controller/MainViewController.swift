@@ -138,20 +138,23 @@ extension MainViewController: UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height = self.mainTableView.bounds.width * 1.42
+
         switch indexPath.section {
         case 0:
             switch indexPath.row {
             case 0:
-                return 180
+                return 170
             case 1:
-                return 240
+                let categoryHeight = self.mainTableView.bounds.width * 0.55
+                return categoryHeight
             default:
                 return UITableView.automaticDimension
             }
         case 1:
             switch indexPath.row {
             case 0:
-                return 600
+                return height
             case 1:
                 return 60
             default:
@@ -160,7 +163,7 @@ extension MainViewController: UITableViewDelegate {
         case 2:
             switch indexPath.row {
             case 0:
-                return 600
+                return height
             case 1:
                 return 60
             default:

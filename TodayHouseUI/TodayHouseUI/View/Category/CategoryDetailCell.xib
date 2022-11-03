@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lkN-I6-6fj">
-                        <rect key="frame" x="4" y="44" width="212" height="346"/>
+                        <rect key="frame" x="4" y="44" width="212" height="242"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSm-0X-Zax">
                                 <rect key="frame" x="0.0" y="0.0" width="212" height="212"/>
@@ -38,7 +38,10 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4V-T0-Jln">
-                                <rect key="frame" x="0.0" y="222" width="212" height="124"/>
+                                <rect key="frame" x="0.0" y="222" width="212" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="QRN-06-cce"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,7 +55,6 @@
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="lkN-I6-6fj" secondAttribute="trailing" constant="4" id="2yw-2b-KAU"/>
                 <constraint firstItem="lkN-I6-6fj" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="4" id="5ZU-6K-T2h"/>
                 <constraint firstItem="lkN-I6-6fj" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="7eq-tk-mll"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="lkN-I6-6fj" secondAttribute="bottom" id="Dp2-zp-7Qt"/>
             </constraints>
             <size key="customSize" width="210" height="408"/>
             <connections>

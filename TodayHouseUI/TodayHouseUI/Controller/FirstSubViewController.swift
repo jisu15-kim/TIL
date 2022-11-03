@@ -29,7 +29,10 @@ class FirstSubViewController: UIViewController {
         collectionView!.register(HotTopicCell.self, forCellWithReuseIdentifier: "HotTopicCell")
         collectionView!.register(FindCategoryCell.self, forCellWithReuseIdentifier: "FindCategoryCell")
         collectionView!.register(AreaCategoryCell.self, forCellWithReuseIdentifier: "AreaCategoryCell")
-        collectionView!.register(RecommandkeywordCell.self, forCellWithReuseIdentifier: "RecommandkeywordCell")
+        collectionView!.register(ImageKeywordCell.self, forCellWithReuseIdentifier: "ImageKeywordCell")
+        collectionView!.register(HouseTypeCell.self, forCellWithReuseIdentifier: "HouseTypeCell")
+        collectionView!.register(RecommandGuideBookCell.self, forCellWithReuseIdentifier: "RecommandGuideBookCell")
+        collectionView!.register(RecommandKeywordCell.self, forCellWithReuseIdentifier: "RecommandKeywordCell")
         collectionView!.delegate = self
         collectionView!.dataSource = self
 //        collectionView!.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: -15)
@@ -49,7 +52,7 @@ class FirstSubViewController: UIViewController {
 
 extension FirstSubViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 7
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -81,11 +84,38 @@ extension FirstSubViewController: UICollectionViewDataSource, UICollectionViewDe
             cell.setupCollectionView()
             return cell
         case 3:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommandkeywordCell", for: indexPath) as? RecommandkeywordCell else { return UICollectionViewCell() }
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageKeywordCell", for: indexPath) as? ImageKeywordCell else { return UICollectionViewCell() }
+            let data = integratedVcDataList.filter { data in
+                data.type == .imageKeyword
+            }
+            cell.imageKeywordData = data
+            cell.setupStackView()
+            cell.setupCollectionView()
+            return cell
+        case 4:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HouseTypeCell", for: indexPath) as? HouseTypeCell else { return UICollectionViewCell() }
+            let data = integratedVcDataList.filter { data in
+                data.type == .houseType
+            }
+            cell.houseTypeData = data
+            cell.setupStackView()
+            cell.setupCollectionView()
+            return cell
+        case 5:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommandGuideBookCell", for: indexPath) as? RecommandGuideBookCell else { return UICollectionViewCell() }
+            let data = integratedVcDataList.filter { data in
+                data.type == .recommandGuideBook
+            }
+            cell.recommandGuideBookData = data
+            cell.setupStackView()
+            cell.setupCollectionView()
+            return cell
+        case 6:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommandKeywordCell", for: indexPath) as? RecommandKeywordCell else { return UICollectionViewCell() }
             let data = integratedVcDataList.filter { data in
                 data.type == .recommandKeyword
             }
-            cell.recommandCategoryData = data
+            cell.recommandKeywordData = data
             cell.setupStackView()
             cell.setupCollectionView()
             return cell
@@ -98,6 +128,7 @@ extension FirstSubViewController: UICollectionViewDataSource, UICollectionViewDe
 extension FirstSubViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = self.collectionView!.bounds.width
+        let dummy = "Dummy"
         switch indexPath.row {
         case 0:
             return CGSize(width: width, height: 240)
@@ -105,7 +136,16 @@ extension FirstSubViewController: UICollectionViewDelegateFlowLayout {
             let height = ((self.collectionView!.bounds.width - 80) / 4.5 + 40) + 50
             return CGSize(width: width, height: height)
         case 3:
-            return CGSize(width: width, height: 300)
+            let height = (dummy.size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14)]).height + 10) * 2 + 15
+            return CGSize(width: width, height: height + 60)
+        case 4:
+            let height = width * 0.7
+            return CGSize(width: width, height: height)
+        case 5:
+            return CGSize(width: width, height: 150)
+        case 6:
+            let height = (dummy.size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14)]).height + 10) * 4 + 15
+            return CGSize(width: width, height: height + 250)
         default:
             return CGSize()
         }

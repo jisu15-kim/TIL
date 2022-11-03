@@ -29,7 +29,7 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VpO-vB-Lb7">
-                        <rect key="frame" x="298" y="174" width="60" height="20"/>
+                        <rect key="frame" x="298" y="179" width="60" height="20"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="PPJ-Uw-4AN">
                                 <rect key="frame" x="10" y="5" width="40" height="10"/>
@@ -74,7 +74,7 @@
                     <constraint firstItem="VpO-vB-Lb7" firstAttribute="trailing" secondItem="rMi-rr-ao6" secondAttribute="trailing" constant="-30" id="7Jl-ed-m09"/>
                     <constraint firstAttribute="bottom" secondItem="rMi-rr-ao6" secondAttribute="bottom" id="cd0-xm-8ic"/>
                     <constraint firstItem="rMi-rr-ao6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="g1W-jy-JLg"/>
-                    <constraint firstItem="VpO-vB-Lb7" firstAttribute="bottom" secondItem="rMi-rr-ao6" secondAttribute="bottom" constant="-55" id="j0b-n6-KKO"/>
+                    <constraint firstItem="VpO-vB-Lb7" firstAttribute="bottom" secondItem="rMi-rr-ao6" secondAttribute="bottom" constant="-50" id="j0b-n6-KKO"/>
                     <constraint firstAttribute="trailing" secondItem="rMi-rr-ao6" secondAttribute="trailing" id="r3u-jp-Lis"/>
                     <constraint firstItem="rMi-rr-ao6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wrj-Pa-25b"/>
                 </constraints>
