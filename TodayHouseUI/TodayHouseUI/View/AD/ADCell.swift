@@ -65,6 +65,7 @@ class ADCell: UITableViewCell {
         self.currentPage.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         self.totalPage.textColor = .lightGray
         self.currentPage.textColor = .white
+        self.scrollTimer()
     }
     
     func updateCurrentPage() {
@@ -72,6 +73,23 @@ class ADCell: UITableViewCell {
         let totalPage = data.count
         self.totalPage.text = "/ \(totalPage) "
         self.currentPage.text = "\(current + 1) "
+    }
+    
+    func scrollTimer() {
+        var timer = Timer()
+        timer.invalidate()
+        timer = .scheduledTimer(withTimeInterval: 2, repeats: true, block: { Timer in
+            self.autoScroll()
+        })
+    }
+    
+    func autoScroll() {
+        if current == ad!.count - 1 {
+            self.adCollectionView.scrollToItem(at: NSIndexPath(row: 0, section: 0) as IndexPath, at: .right, animated: true)
+        } else {
+            self.current += 1
+            self.adCollectionView.scrollToItem(at: NSIndexPath(row: current, section: 0) as IndexPath, at: .right, animated: true)
+        }
     }
 }
 
