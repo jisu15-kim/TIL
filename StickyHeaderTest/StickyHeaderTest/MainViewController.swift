@@ -11,8 +11,13 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var upperHeaderHeight: NSLayoutConstraint!
+    @IBOutlet weak var upperHeaderView: UIView!
+    @IBOutlet weak var image: UIImageView!
     
-    var headerMax: Float = 100.0
+    var viewBlurEffect: UIVisualEffectView = UIVisualEffectView()
+    
+    var headerMin: Float = 100.0
+    var headerMax: Float = 250
     var dummyData: [Int] = []
     
     override func viewDidLoad() {
@@ -20,6 +25,7 @@ class MainViewController: UIViewController {
         
         setupData()
         setupCollectionView()
+        setupHeader()
     }
     
     func setupData() {
@@ -41,6 +47,19 @@ class MainViewController: UIViewController {
         collectionView.register(DummyCell.self, forCellWithReuseIdentifier: "DummyCell")
         collectionView.register(CollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "DummyHeader")
         
+    }
+    
+    func setupHeader() {
+        viewBlurEffect.effect = UIBlurEffect(style: .light)
+        self.upperHeaderView.addSubview(viewBlurEffect)
+        viewBlurEffect.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            viewBlurEffect.leadingAnchor.constraint(equalTo: upperHeaderView.leadingAnchor),
+            viewBlurEffect.topAnchor.constraint(equalTo: upperHeaderView.topAnchor),
+            viewBlurEffect.trailingAnchor.constraint(equalTo: upperHeaderView.trailingAnchor),
+            viewBlurEffect.bottomAnchor.constraint(equalTo: upperHeaderView.bottomAnchor)
+        ])
+        viewBlurEffect.alpha = 0
     }
 }
 
@@ -77,17 +96,18 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset: Float = Float(-scrollView.contentOffset.y + CGFloat(self.headerMax))
-        print(offset)
-        if 0 <= offset {
+        let percentage = (Float(scrollView.contentOffset.y) / (self.headerMax - self.headerMin)) * 100
+        // 현재값 / max - min * 100
+        
+        if headerMin <= offset {
             self.upperHeaderHeight.constant = CGFloat(offset)
+            self.viewBlurEffect.alpha = CGFloat(percentage * 0.01)
         // 순간적으로 offset 값이 벌어진 경우를 대비
         } else if self.headerMax < Float(scrollView.contentOffset.y) {
-            self.upperHeaderHeight.constant = CGFloat(0)
+            print("요기루")
+            self.upperHeaderHeight.constant = CGFloat(headerMin)
+            self.viewBlurEffect.alpha = 1.0
         }
-        
-//        if 0 <= offset {
-//            self.upperHeaderHeight.constant = CGFloat(offset)
-//        // 순간적으로 offset 값이 벌어진 경우를 대비
     }
 }
 
