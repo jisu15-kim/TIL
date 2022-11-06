@@ -117,8 +117,9 @@ class SearchViewController: UIViewController {
             ])
             return vc
         }()
+        let sixthVC = QnAViewController()
         
-        vcList = [firstVC, secondVC, thirdVC, fourthVC, fifthVC]
+        vcList = [firstVC, secondVC, thirdVC, fourthVC, fifthVC, sixthVC]
         
         dataList.forEach { data in
             let vc = UIViewController()

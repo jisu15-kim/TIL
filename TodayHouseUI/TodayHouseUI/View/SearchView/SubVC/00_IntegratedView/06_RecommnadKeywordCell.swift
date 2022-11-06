@@ -152,11 +152,6 @@ class RecommandKeywordDetailCell: UICollectionViewCell {
         stack!.clipsToBounds = true
         stack!.layer.borderWidth = 1
         stack!.layer.borderColor = UIColor.systemGray5.cgColor
-//        stack!.layer.shadowColor = UIColor.darkGray.cgColor
-//        stack!.layer.masksToBounds = false
-//        stack!.layer.shadowOffset = CGSize(width: 1, height: 1)
-//        stack!.layer.shadowRadius = 2
-//        stack!.layer.shadowOpacity = 0.05
     }
     
     func setupConstraint() {

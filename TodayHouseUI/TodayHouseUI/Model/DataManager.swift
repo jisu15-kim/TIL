@@ -14,6 +14,7 @@ class DataManager {
     private var dataList: [String] = []
     private var integratedVcData: [IntegratedVcData] = []
     private var recommandSearchKeywordData: [RecommandSearchKeyword] = []
+    private var qnaData: [QnARecommandModel] = []
     
     private func fetchData() {
         
@@ -186,5 +187,82 @@ class DataManager {
     public func getRkData() -> [RecommandSearchKeyword] {
         fetchRkData()
         return recommandSearchKeywordData
+    }
+    
+    private func fetchQnAData() {
+        qnaData = [
+            QnARecommandModel(title: "리모델링/올수리", type: .normal),
+            QnARecommandModel(title: "견적", type: .normal),
+            QnARecommandModel(title: "업체 추천", type: .normal),
+            QnARecommandModel(title: "셀프 인테리어", type: .normal),
+            QnARecommandModel(title: "신혼", type: .normal),
+            QnARecommandModel(title: "리폼", type: .normal),
+            QnARecommandModel(title: "디자인 추천", type: .normal),
+            
+            QnARecommandModel(title: "가벽", type: .section),
+            QnARecommandModel(title: "단열", type: .section),
+            QnARecommandModel(title: "도배", type: .section),
+            QnARecommandModel(title: "마루", type: .section),
+            QnARecommandModel(title: "목공", type: .section),
+            QnARecommandModel(title: "몰딩", type: .section),
+            QnARecommandModel(title: "바닥", type: .section),
+            QnARecommandModel(title: "벽", type: .section),
+            QnARecommandModel(title: "붙박이", type: .section),
+            QnARecommandModel(title: "창호/창호", type: .section),
+            QnARecommandModel(title: "수리/복구", type: .section),
+            QnARecommandModel(title: "실리콘", type: .section),
+            QnARecommandModel(title: "외관/외벽", type: .section),
+            QnARecommandModel(title: "입주청소", type: .section),
+            QnARecommandModel(title: "장판", type: .section),
+            QnARecommandModel(title: "전기", type: .section),
+            QnARecommandModel(title: "조명", type: .section),
+            QnARecommandModel(title: "줄눈", type: .section),
+            QnARecommandModel(title: "천장", type: .section),
+            QnARecommandModel(title: "철거", type: .section),
+            QnARecommandModel(title: "콘센트", type: .section),
+            QnARecommandModel(title: "타일", type: .section),
+            QnARecommandModel(title: "페인트", type: .section),
+            QnARecommandModel(title: "필름", type: .section),
+            QnARecommandModel(title: "기타공정", type: .section),
+            QnARecommandModel(title: "기타청소", type: .section),
+            
+            QnARecommandModel(title: "가구배치/이동", type: .furniture),
+            QnARecommandModel(title: "냉장고", type: .furniture),
+            QnARecommandModel(title: "블라인드", type: .furniture),
+            QnARecommandModel(title: "손잡이", type: .furniture),
+            QnARecommandModel(title: "수전/싱크대", type: .furniture),
+            QnARecommandModel(title: "소파", type: .furniture),
+            QnARecommandModel(title: "식탁", type: .furniture),
+            QnARecommandModel(title: "유리", type: .furniture),
+            QnARecommandModel(title: "에어컨", type: .furniture),
+            QnARecommandModel(title: "침대", type: .furniture),
+            QnARecommandModel(title: "TV", type: .furniture),
+            QnARecommandModel(title: "기타가구", type: .furniture),
+            
+            QnARecommandModel(title: "단독주택", type: .space),
+            QnARecommandModel(title: "아파트", type: .space),
+            QnARecommandModel(title: "상가", type: .space),
+            QnARecommandModel(title: "원룸", type: .space),
+            
+            QnARecommandModel(title: "10평미만", type: .wide),
+            QnARecommandModel(title: "10평대", type: .wide),
+            QnARecommandModel(title: "20평대", type: .wide),
+            QnARecommandModel(title: "30평대", type: .wide),
+            QnARecommandModel(title: "40평대", type: .wide),
+            QnARecommandModel(title: "50평이상", type: .wide),
+            
+            QnARecommandModel(title: "화장실", type: .interior),
+            QnARecommandModel(title: "베란다", type: .interior),
+            QnARecommandModel(title: "거실", type: .interior),
+            QnARecommandModel(title: "주방", type: .interior),
+            QnARecommandModel(title: "현관", type: .interior),
+            
+            QnARecommandModel(title: "기타", type: .ect),
+        ]
+    }
+    
+    public func getQnAData() -> [QnARecommandModel] {
+        fetchQnAData()
+        return qnaData
     }
 }

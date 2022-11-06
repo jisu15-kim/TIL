@@ -39,14 +39,14 @@ struct RecommandSearchKeyword {
     var type: SearchViewCategory
 }
 
-enum QnARecommandSection {
-    case normal
-    case section
-    case furniture
-    case space
-    case wide
-    case interior
-    case ect
+enum QnARecommandSection: String, CaseIterable {
+    case normal = "일반"
+    case section = "부분 공정"
+    case furniture = "가구"
+    case space = "공간"
+    case wide = "평수"
+    case interior = "실내 공간"
+    case ect = "기타"
 }
 
 struct QnARecommandModel {
