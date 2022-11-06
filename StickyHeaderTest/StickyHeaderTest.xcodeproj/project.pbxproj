@@ -13,6 +13,8 @@
 		CD3D4F7329165064006C5C2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3D4F7129165064006C5C2C /* Main.storyboard */; };
 		CD3D4F7529165065006C5C2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3D4F7429165065006C5C2C /* Assets.xcassets */; };
 		CD3D4F7829165065006C5C2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3D4F7629165065006C5C2C /* LaunchScreen.storyboard */; };
+		CDFF7392291783830067FC82 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF7391291783830067FC82 /* MainViewController.swift */; };
+		CDFF73942917981B0067FC82 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFF73932917981B0067FC82 /* CollectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CD3D4F7429165065006C5C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD3D4F7729165065006C5C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD3D4F7929165065006C5C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDFF7391291783830067FC82 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CDFF73932917981B0067FC82 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				CD3D4F7429165065006C5C2C /* Assets.xcassets */,
 				CD3D4F7629165065006C5C2C /* LaunchScreen.storyboard */,
 				CD3D4F7929165065006C5C2C /* Info.plist */,
+				CDFF7391291783830067FC82 /* MainViewController.swift */,
+				CDFF73932917981B0067FC82 /* CollectionHeaderView.swift */,
 			);
 			path = StickyHeaderTest;
 			sourceTree = "<group>";
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD3D4F7029165064006C5C2C /* ViewController.swift in Sources */,
+				CDFF73942917981B0067FC82 /* CollectionHeaderView.swift in Sources */,
 				CD3D4F6C29165064006C5C2C /* AppDelegate.swift in Sources */,
 				CD3D4F6E29165064006C5C2C /* SceneDelegate.swift in Sources */,
+				CDFF7392291783830067FC82 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
