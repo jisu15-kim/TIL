@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		CD2C3E24290AB4C200799A0A /* ViewMoreButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C3E23290AB4C200799A0A /* ViewMoreButtonCell.swift */; };
 		CD2C3E27290AC6C400799A0A /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C3E26290AC6C400799A0A /* TipsCell.swift */; };
+		CD30B31929164A4C00A93935 /* QnAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30B31829164A4C00A93935 /* QnAViewController.swift */; };
 		CD52EBD72912543300ACCEDB /* DummyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52EBD62912543300ACCEDB /* DummyCell.swift */; };
-		CD52EBD92912623E00ACCEDB /* 01_FindCategoryCell copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52EBD82912623E00ACCEDB /* 01_FindCategoryCell copy.swift */; };
+		CD52EBD92912623E00ACCEDB /* 01_FindCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52EBD82912623E00ACCEDB /* 01_FindCategoryCell.swift */; };
 		CD52EBDB291266AA00ACCEDB /* 03_ImageKeywordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52EBDA291266AA00ACCEDB /* 03_ImageKeywordCell.swift */; };
 		CD52EBDD2913614100ACCEDB /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52EBDC2913614100ACCEDB /* CustomCollectionViewFlowLayout.swift */; };
 		CD52EBDF291362D400ACCEDB /* 04_HouseTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52EBDE291362D400ACCEDB /* 04_HouseTypeCell.swift */; };
 		CD52EBE12913A07700ACCEDB /* 05_RecommandGuideBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD52EBE02913A07700ACCEDB /* 05_RecommandGuideBookCell.swift */; };
 		CD594650290C3AA500868EC3 /* FindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59464F290C3AA500868EC3 /* FindCell.swift */; };
+		CD66BDF529152A2200817F3F /* 01_RecommandKeywordViewController01_PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66BDF429152A2200817F3F /* 01_RecommandKeywordViewController01_PhotoViewController.swift */; };
+		CD66BDF729152ED600817F3F /* PhotoRecommandKeywordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD66BDF629152ED600817F3F /* PhotoRecommandKeywordCell.swift */; };
 		CD934799290570D2008EF698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD934798290570D2008EF698 /* AppDelegate.swift */; };
 		CD93479B290570D2008EF698 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93479A290570D2008EF698 /* SceneDelegate.swift */; };
 		CD93479D290570D2008EF698 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93479C290570D2008EF698 /* MainViewController.swift */; };
@@ -35,7 +38,7 @@
 		CD9347C529059074008EF698 /* GridCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9347C429059074008EF698 /* GridCollectionViewFlowLayout.swift */; };
 		CDB617F22910F6FF00A81B75 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB617F12910F6FF00A81B75 /* SearchViewController.swift */; };
 		CDB617F42910F80500A81B75 /* SearchCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB617F32910F80500A81B75 /* SearchCategoryCell.swift */; };
-		CDB617F7291119D200A81B75 /* FirstSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB617F6291119D200A81B75 /* FirstSubViewController.swift */; };
+		CDB617F7291119D200A81B75 /* 00_IntegratedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB617F6291119D200A81B75 /* 00_IntegratedViewController.swift */; };
 		CDB617F9291119EE00A81B75 /* IntegratedVcData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB617F8291119EE00A81B75 /* IntegratedVcData.swift */; };
 		CDC5B4292909785D00FD2DA4 /* RecommandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC5B4272909785D00FD2DA4 /* RecommandCell.swift */; };
 		CDC5B42A2909785D00FD2DA4 /* RecommandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC5B4282909785D00FD2DA4 /* RecommandCell.xib */; };
@@ -53,13 +56,16 @@
 /* Begin PBXFileReference section */
 		CD2C3E23290AB4C200799A0A /* ViewMoreButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMoreButtonCell.swift; sourceTree = "<group>"; };
 		CD2C3E26290AC6C400799A0A /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
+		CD30B31829164A4C00A93935 /* QnAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAViewController.swift; sourceTree = "<group>"; };
 		CD52EBD62912543300ACCEDB /* DummyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCell.swift; sourceTree = "<group>"; };
-		CD52EBD82912623E00ACCEDB /* 01_FindCategoryCell copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "01_FindCategoryCell copy.swift"; sourceTree = "<group>"; };
+		CD52EBD82912623E00ACCEDB /* 01_FindCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 01_FindCategoryCell.swift; sourceTree = "<group>"; };
 		CD52EBDA291266AA00ACCEDB /* 03_ImageKeywordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03_ImageKeywordCell.swift; sourceTree = "<group>"; };
 		CD52EBDC2913614100ACCEDB /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		CD52EBDE291362D400ACCEDB /* 04_HouseTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 04_HouseTypeCell.swift; sourceTree = "<group>"; };
 		CD52EBE02913A07700ACCEDB /* 05_RecommandGuideBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 05_RecommandGuideBookCell.swift; sourceTree = "<group>"; };
 		CD59464F290C3AA500868EC3 /* FindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCell.swift; sourceTree = "<group>"; };
+		CD66BDF429152A2200817F3F /* 01_RecommandKeywordViewController01_PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 01_RecommandKeywordViewController01_PhotoViewController.swift; sourceTree = "<group>"; };
+		CD66BDF629152ED600817F3F /* PhotoRecommandKeywordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRecommandKeywordCell.swift; sourceTree = "<group>"; };
 		CD934795290570D2008EF698 /* TodayHouseUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayHouseUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD934798290570D2008EF698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD93479A290570D2008EF698 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +87,7 @@
 		CD9347C429059074008EF698 /* GridCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		CDB617F12910F6FF00A81B75 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CDB617F32910F80500A81B75 /* SearchCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryCell.swift; sourceTree = "<group>"; };
-		CDB617F6291119D200A81B75 /* FirstSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSubViewController.swift; sourceTree = "<group>"; };
+		CDB617F6291119D200A81B75 /* 00_IntegratedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 00_IntegratedViewController.swift; sourceTree = "<group>"; };
 		CDB617F8291119EE00A81B75 /* IntegratedVcData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratedVcData.swift; sourceTree = "<group>"; };
 		CDC5B4272909785D00FD2DA4 /* RecommandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandCell.swift; sourceTree = "<group>"; };
 		CDC5B4282909785D00FD2DA4 /* RecommandCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommandCell.xib; sourceTree = "<group>"; };
@@ -123,6 +129,33 @@
 			path = Tips;
 			sourceTree = "<group>";
 		};
+		CD66BDF2291529CE00817F3F /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				CDB617F12910F6FF00A81B75 /* SearchViewController.swift */,
+				CD66BDF3291529D600817F3F /* SubVC */,
+			);
+			path = SearchVC;
+			sourceTree = "<group>";
+		};
+		CD66BDF3291529D600817F3F /* SubVC */ = {
+			isa = PBXGroup;
+			children = (
+				CDB617F6291119D200A81B75 /* 00_IntegratedViewController.swift */,
+				CD66BDF429152A2200817F3F /* 01_RecommandKeywordViewController01_PhotoViewController.swift */,
+				CD30B31829164A4C00A93935 /* QnAViewController.swift */,
+			);
+			path = SubVC;
+			sourceTree = "<group>";
+		};
+		CD66BDF829152EDA00817F3F /* 01_PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				CD66BDF629152ED600817F3F /* PhotoRecommandKeywordCell.swift */,
+			);
+			path = 01_PhotoView;
+			sourceTree = "<group>";
+		};
 		CD93478C290570D2008EF698 = {
 			isa = PBXGroup;
 			children = (
@@ -159,8 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				CD93479C290570D2008EF698 /* MainViewController.swift */,
-				CDB617F12910F6FF00A81B75 /* SearchViewController.swift */,
-				CDB617F6291119D200A81B75 /* FirstSubViewController.swift */,
+				CD66BDF2291529CE00817F3F /* SearchVC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -223,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				CDF9C03529118B8000532A82 /* 00_IntegratedView */,
+				CD66BDF829152EDA00817F3F /* 01_PhotoView */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -274,7 +307,7 @@
 			children = (
 				CD52EBD62912543300ACCEDB /* DummyCell.swift */,
 				CDF9C031291176F700532A82 /* 00_HotTopicCell.swift */,
-				CD52EBD82912623E00ACCEDB /* 01_FindCategoryCell copy.swift */,
+				CD52EBD82912623E00ACCEDB /* 01_FindCategoryCell.swift */,
 				CDF9C03629118C1500532A82 /* 02_AreaCategoryCell.swift */,
 				CD52EBDA291266AA00ACCEDB /* 03_ImageKeywordCell.swift */,
 				CD52EBDE291362D400ACCEDB /* 04_HouseTypeCell.swift */,
@@ -362,10 +395,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD66BDF529152A2200817F3F /* 01_RecommandKeywordViewController01_PhotoViewController.swift in Sources */,
 				CDC5B4292909785D00FD2DA4 /* RecommandCell.swift in Sources */,
 				CD2C3E27290AC6C400799A0A /* TipsCell.swift in Sources */,
 				CD9347C529059074008EF698 /* GridCollectionViewFlowLayout.swift in Sources */,
-				CDB617F7291119D200A81B75 /* FirstSubViewController.swift in Sources */,
+				CDB617F7291119D200A81B75 /* 00_IntegratedViewController.swift in Sources */,
 				CD52EBDD2913614100ACCEDB /* CustomCollectionViewFlowLayout.swift in Sources */,
 				CDF9C032291176F700532A82 /* 00_HotTopicCell.swift in Sources */,
 				CDB617F22910F6FF00A81B75 /* SearchViewController.swift in Sources */,
@@ -375,11 +409,13 @@
 				CD52EBDF291362D400ACCEDB /* 04_HouseTypeCell.swift in Sources */,
 				CDB617F42910F80500A81B75 /* SearchCategoryCell.swift in Sources */,
 				CD9347B22905741E008EF698 /* DataManager.swift in Sources */,
+				CD66BDF729152ED600817F3F /* PhotoRecommandKeywordCell.swift in Sources */,
 				CD9347B529057FA2008EF698 /* ADCell.swift in Sources */,
 				CD9347B9290582AA008EF698 /* CategoryCell.swift in Sources */,
+				CD30B31929164A4C00A93935 /* QnAViewController.swift in Sources */,
 				CD9347BD2905858A008EF698 /* CategoryDetailCell.swift in Sources */,
 				CD2C3E24290AB4C200799A0A /* ViewMoreButtonCell.swift in Sources */,
-				CD52EBD92912623E00ACCEDB /* 01_FindCategoryCell copy.swift in Sources */,
+				CD52EBD92912623E00ACCEDB /* 01_FindCategoryCell.swift in Sources */,
 				CD52EBE12913A07700ACCEDB /* 05_RecommandGuideBookCell.swift in Sources */,
 				CD52EBD72912543300ACCEDB /* DummyCell.swift in Sources */,
 				CDF8AC552913B346007BA142 /* 06_RecommnadKeywordCell.swift in Sources */,

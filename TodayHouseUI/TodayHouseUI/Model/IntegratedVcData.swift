@@ -23,3 +23,33 @@ struct IntegratedVcData {
     var description: String?
     var type: SearchViewCellType
 }
+
+enum SearchViewCategory: CaseIterable {
+    case photo
+    case houseWarming
+    case knowHow
+    case store
+    case qna
+    case interiorStore
+}
+
+struct RecommandSearchKeyword {
+    var title: String
+    var qna: [QnARecommandModel]?
+    var type: SearchViewCategory
+}
+
+enum QnARecommandSection {
+    case normal
+    case section
+    case furniture
+    case space
+    case wide
+    case interior
+    case ect
+}
+
+struct QnARecommandModel {
+    var title: String
+    var type: QnARecommandSection
+}

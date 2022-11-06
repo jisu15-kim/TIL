@@ -12,6 +12,7 @@ class SearchViewController: UIViewController {
     private let dataManager = DataManager()
     private var dataList: [String] = []
     private var vcList: [UIViewController] = []
+    private var recommandData: [RecommandSearchKeyword] = []
     private var currentPage: Int = 0 {
         didSet {
             pagingAction(oldValue: oldValue, newValue: currentPage)
@@ -80,9 +81,45 @@ class SearchViewController: UIViewController {
     
     // VC 생성 ! 🔥
     private func setupVC() {
+        // Data Fetch
         self.dataList = dataManager.getCategoryData()
+        self.recommandData = dataManager.getRkData()
+        
+        // Data 분기
+        let photoData = self.recommandData.filter { data in
+            data.type == .photo
+        }
+        let houseWarmData = self.recommandData.filter { data in
+            data.type == .houseWarming
+        }
+        let knowHowData = self.recommandData.filter { data in
+            data.type == .knowHow
+        }
+        
+        // VC 생성
         let firstVC = FirstSubViewController()
-        vcList = [firstVC]
+        let secondVC = RecommandKeywordViewController(dataModel: photoData)
+        let thirdVC = RecommandKeywordViewController(dataModel: houseWarmData)
+        let fourthVC = RecommandKeywordViewController(dataModel: knowHowData)
+        let fifthVC: UIViewController = {
+            let vc = UIViewController()
+            let label = UILabel()
+            label.text = "Sample"
+            label.textAlignment = .center
+            label.font = .systemFont(ofSize: 50, weight: .bold)
+            vc.view.addSubview(label)
+            label.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                label.centerXAnchor.constraint(equalTo: vc.view.centerXAnchor),
+                label.centerYAnchor.constraint(equalTo: vc.view.centerYAnchor),
+                label.heightAnchor.constraint(equalToConstant: 100),
+                label.widthAnchor.constraint(equalToConstant: 500)
+            ])
+            return vc
+        }()
+        
+        vcList = [firstVC, secondVC, thirdVC, fourthVC, fifthVC]
+        
         dataList.forEach { data in
             let vc = UIViewController()
             let label = UILabel()
