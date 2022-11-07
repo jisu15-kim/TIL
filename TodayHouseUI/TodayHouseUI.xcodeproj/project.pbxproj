@@ -36,6 +36,7 @@
 		CD9347C129058849008EF698 /* ADDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9347BF29058849008EF698 /* ADDetailCell.swift */; };
 		CD9347C229058849008EF698 /* ADDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9347C029058849008EF698 /* ADDetailCell.xib */; };
 		CD9347C529059074008EF698 /* GridCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9347C429059074008EF698 /* GridCollectionViewFlowLayout.swift */; };
+		CDA676D02917EE1A0080A7D5 /* QnADetaillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA676CF2917EE1A0080A7D5 /* QnADetaillCell.swift */; };
 		CDB617F22910F6FF00A81B75 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB617F12910F6FF00A81B75 /* SearchViewController.swift */; };
 		CDB617F42910F80500A81B75 /* SearchCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB617F32910F80500A81B75 /* SearchCategoryCell.swift */; };
 		CDB617F7291119D200A81B75 /* 00_IntegratedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB617F6291119D200A81B75 /* 00_IntegratedViewController.swift */; };
@@ -85,6 +86,7 @@
 		CD9347BF29058849008EF698 /* ADDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDetailCell.swift; sourceTree = "<group>"; };
 		CD9347C029058849008EF698 /* ADDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADDetailCell.xib; sourceTree = "<group>"; };
 		CD9347C429059074008EF698 /* GridCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		CDA676CF2917EE1A0080A7D5 /* QnADetaillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnADetaillCell.swift; sourceTree = "<group>"; };
 		CDB617F12910F6FF00A81B75 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CDB617F32910F80500A81B75 /* SearchCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryCell.swift; sourceTree = "<group>"; };
 		CDB617F6291119D200A81B75 /* 00_IntegratedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 00_IntegratedViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +235,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		CDA676CE2917EDE90080A7D5 /* QnACell */ = {
+			isa = PBXGroup;
+			children = (
+				CDA676CF2917EE1A0080A7D5 /* QnADetaillCell.swift */,
+			);
+			path = QnACell;
+			sourceTree = "<group>";
+		};
 		CDB617EF2910F6BD00A81B75 /* FindCategory */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +266,7 @@
 			children = (
 				CDF9C03529118B8000532A82 /* 00_IntegratedView */,
 				CD66BDF829152EDA00817F3F /* 01_PhotoView */,
+				CDA676CE2917EDE90080A7D5 /* QnACell */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -399,6 +410,7 @@
 				CDC5B4292909785D00FD2DA4 /* RecommandCell.swift in Sources */,
 				CD2C3E27290AC6C400799A0A /* TipsCell.swift in Sources */,
 				CD9347C529059074008EF698 /* GridCollectionViewFlowLayout.swift in Sources */,
+				CDA676D02917EE1A0080A7D5 /* QnADetaillCell.swift in Sources */,
 				CDB617F7291119D200A81B75 /* 00_IntegratedViewController.swift in Sources */,
 				CD52EBDD2913614100ACCEDB /* CustomCollectionViewFlowLayout.swift in Sources */,
 				CDF9C032291176F700532A82 /* 00_HotTopicCell.swift in Sources */,
