@@ -1,6 +1,0 @@
-framework module Pods_FirebaseIntegration {
-  umbrella header "Pods-FirebaseIntegration-umbrella.h"
-
-  export *
-  module * { export * }
-}
