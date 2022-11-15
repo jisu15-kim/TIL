@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 enum FirestoreError: Error {
@@ -30,7 +31,8 @@ class ViewController: UIViewController {
     // Send 버튼 클릭시
     @IBAction func sendButtonClicked(_ sender: Any) {
         guard let data = textField.text else { return }
-        let message = Message(id: "jisu", content: data)
+//        let docToWrite = DocumentReference(from: <#T##Decoder#>)
+        let message = Message(id: "jisu", content: data, docId: nil)
         
         myFirestore.save(message) { error in
             print("세이브? \(message)")
