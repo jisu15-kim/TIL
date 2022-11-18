@@ -32,15 +32,16 @@ final class CustomBarItem: UIButton {
     init(config: CustomBarItemConfiguration) {
         self.customBarItemConfig = config
         super.init(frame: .zero)
-        
         setupStyle()
         updateConfig()
+        self.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
     private func setupStyle() {
         self.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
         self.titleLabel?.textColor = .white
         self.titleLabel?.tintColor = .white
+        self.tintColor = .white
     }
     
     private func updateConfig() {

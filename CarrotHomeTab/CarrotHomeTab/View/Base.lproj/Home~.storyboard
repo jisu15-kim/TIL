@@ -9,6 +9,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--홈-->
+        <scene sceneID="HAK-3j-zz1">
+            <objects>
+                <viewController id="kiz-pv-WGW" customClass="HomeViewController" customModule="CarrotHomeTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="43w-er-CEd">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eF-vC-6ep">
+                                <rect key="frame" x="177" y="586" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="kiz-pv-WGW" eventType="touchUpInside" id="nCA-A5-jLz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDK-Uk-1Df">
+                                <rect key="frame" x="193" y="354" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IFj-bq-OMM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" id="lot-OX-Uji"/>
+                    <navigationItem key="navigationItem" id="KJT-Kh-xdN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEc-9Y-mxR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="1051"/>
+        </scene>
         <!--동네생활-->
         <scene sceneID="vhu-cn-RMG">
             <objects>
@@ -85,7 +120,7 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="IP7-Wo-Fy7" kind="relationship" relationship="viewControllers" id="Fni-C6-hLI"/>
+                        <segue destination="kiz-pv-WGW" kind="relationship" relationship="viewControllers" id="Fni-C6-hLI"/>
                         <segue destination="VAl-TK-NMj" kind="relationship" relationship="viewControllers" id="HO8-46-YX9"/>
                         <segue destination="F8L-3h-vDI" kind="relationship" relationship="viewControllers" id="QtM-P3-6iy"/>
                         <segue destination="LOA-MR-gbF" kind="relationship" relationship="viewControllers" id="6yG-Jw-PZf"/>
@@ -115,19 +150,10 @@
             </objects>
             <point key="canvasLocation" x="335" y="280"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="PG4-p0-LGe">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="IP7-Wo-Fy7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cRY-wM-D2H"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="is8-ep-4Fv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1175" y="1051"/>
-        </scene>
     </scenes>
     <resources>
         <image name="doc" catalog="system" width="115" height="128"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="rectangle.3.group.bubble.left" catalog="system" width="128" height="110"/>
