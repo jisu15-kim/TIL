@@ -15,10 +15,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
 
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         
@@ -38,3 +34,4 @@ extension ViewController: SomeProtocol {
 protocol SomeProtocol {
     func doSomething()
 }
+
