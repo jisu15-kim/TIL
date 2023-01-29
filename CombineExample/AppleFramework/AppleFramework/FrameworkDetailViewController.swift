@@ -15,47 +15,38 @@ class FrameworkDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    let item = PassthroughSubject<AppleFramework, Never>()
-    var learnMoreTapped = PassthroughSubject<Any, Never>()
+    let framework = CurrentValueSubject<AppleFramework, Never>(AppleFramework(name: "Unknown", imageName: "", urlString: "", description: ""))
+    var learnMoreTapped = PassthroughSubject<AppleFramework, Never>()
     var subscriptions = Set<AnyCancellable>()
-    
-    var framework: AppleFramework = AppleFramework(name: "Unknown", imageName: "", urlString: "", description: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
+        
         bind()
     }
     
     func bind() {
-        item
+        
+        // UI세팅
+        framework
             .receive(on: RunLoop.main)
-            .sink { [weak self] item in
-                self?.framework = item
-                self?.imageView.image = UIImage(named: item.imageName)
-                self?.titleLabel.text = item.name
-                self?.descriptionLabel.text = item.description
+            .sink { [weak self] framework in
+                self?.imageView.image = UIImage(named: framework.imageName)
+                self?.titleLabel.text = framework.name
+                self?.descriptionLabel.text = framework.description
             }.store(in: &subscriptions)
         
+        // 버튼 클릭
         learnMoreTapped
             .receive(on: RunLoop.main)
-            .sink { [weak self] item in
-                guard let url = URL(string: self?.framework.urlString ?? "") else {
-                    return
-                }
+            .compactMap { URL(string: $0.urlString) }
+            .sink { [weak self] url in
                 let safari = SFSafariViewController(url: url)
                 self?.present(safari, animated: true)
             }.store(in: &subscriptions)
     }
     
-    func updateUI() {
-        imageView.image = UIImage(named: framework.imageName)
-        titleLabel.text = framework.name
-        descriptionLabel.text = framework.description
-    }
-    
-    
     @IBAction func learnMoreTapped(_ sender: Any) {
-        learnMoreTapped.send(sender)
+        learnMoreTapped.send(framework.value)
     }
 }
