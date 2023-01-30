@@ -6,41 +6,23 @@
 //
 
 import Foundation
+import Alamofire
 import Combine
 
-///// Defines the Network service errors.
-enum NetworkError: Error {
-    case invalidRequest
-    case invalidResponse
-    case responseError(statusCode: Int)
-    case jsonDecodingError(error: Error)
-}
-
 final class NetworkService {
-    let session: URLSession
-    
-    init(configuration: URLSessionConfiguration) {
-        session = URLSession(configuration: configuration)
-    }
-    
-    func load<T>(_ resource: Resource<T>) -> AnyPublisher<T, Error> {
-        guard let request = resource.urlRequest else {
-            return .fail(NetworkError.invalidRequest)
-        }
+
+    func getProfile(keyword: String, completion: @escaping (UserProfile?) -> Void ) {
+        let url = "https://api.github.com/users/\(keyword)"
         
-        return session
-            .dataTaskPublisher(for: request)
-            .tryMap { result -> Data in
-                guard let response = result.response as? HTTPURLResponse,
-                      (200..<300).contains(response.statusCode)
-                else {
-                    let response = result.response as? HTTPURLResponse
-                    let statusCode = response?.statusCode ?? -1
-                    throw NetworkError.responseError(statusCode: statusCode)
+        AF.request(url)
+            .responseDecodable(of: UserProfile.self) { result in
+                switch result.result {
+                case .success(let response):
+                    completion(response)
+                case .failure(let error):
+                    print("실패: \(error)")
+                    completion(nil)
                 }
-                return result.data
             }
-            .decode(type: T.self, decoder: JSONDecoder())
-            .eraseToAnyPublisher()
     }
 }

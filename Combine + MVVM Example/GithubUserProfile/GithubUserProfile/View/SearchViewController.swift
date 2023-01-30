@@ -11,10 +11,9 @@ import Kingfisher
 
 class UserProfileViewController: UIViewController {
     
-    let network = NetworkService(configuration: .default)
-    
-    @Published private(set) var user: UserProfile?
     private var subscriptions = Set<AnyCancellable>()
+    
+    private var viewModel: UserProfileViewModel!
     
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -25,6 +24,7 @@ class UserProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel = UserProfileViewModel()
         setupUI()
         bind()
         embedSearchControl()
@@ -35,7 +35,8 @@ class UserProfileViewController: UIViewController {
     }
     
     private func bind() {
-        $user
+        
+        viewModel.items
             .receive(on: RunLoop.main)
             .sink { [weak self] user in
                 self?.update(user)
@@ -81,19 +82,6 @@ extension UserProfileViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         guard let keyword = searchBar.text, !keyword.isEmpty else { return }
-        let resource = Resource<UserProfile>(base: "https://api.github.com/", path: "users/\(keyword)", params: [:], header: ["Content-Type": "application/json"])
-        
-        network.load(resource)
-            .receive(on: RunLoop.main)
-            .sink { completion in
-                switch completion {
-                case .failure(let error):
-                    self.user = nil
-                    print("error: \(error)")
-                case .finished: break
-                }
-            } receiveValue: { user in
-                self.user = user
-            }.store(in: &subscriptions)
+        viewModel.searchButtonTapped(keyword: keyword)
     }
 }

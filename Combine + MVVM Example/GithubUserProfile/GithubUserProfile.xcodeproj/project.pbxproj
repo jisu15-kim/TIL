@@ -21,6 +21,8 @@
 		941BDB4F2842570D00DF0BFC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BDB4E2842570D00DF0BFC /* SearchViewController.swift */; };
 		941BDB512842574700DF0BFC /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BDB502842574700DF0BFC /* UserProfile.swift */; };
 		94D1CB7C28434F190047D692 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 94D1CB7B28434F190047D692 /* Kingfisher */; };
+		CD3CD65229879D8900D802B8 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3CD65129879D8900D802B8 /* SearchViewModel.swift */; };
+		CD3CD65529879FE700D802B8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD3CD65429879FE700D802B8 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		941BDB4C284256B900DF0BFC /* Publisher+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Utils.swift"; sourceTree = "<group>"; };
 		941BDB4E2842570D00DF0BFC /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		941BDB502842574700DF0BFC /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		CD3CD65129879D8900D802B8 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94D1CB7C28434F190047D692 /* Kingfisher in Frameworks */,
+				CD3CD65529879FE700D802B8 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,9 +117,9 @@
 				941BDB182842567A00DF0BFC /* SceneDelegate.swift */,
 				941BDB4B284256B900DF0BFC /* Utils */,
 				941BDB46284256AD00DF0BFC /* Network */,
-				941BDB1C2842567A00DF0BFC /* Main.storyboard */,
-				941BDB4E2842570D00DF0BFC /* SearchViewController.swift */,
 				941BDB52284257DC00DF0BFC /* Model */,
+				CD3CD64F29879D1D00D802B8 /* View */,
+				CD3CD65029879D6800D802B8 /* ViewModel */,
 				941BDB1F2842567B00DF0BFC /* Assets.xcassets */,
 				941BDB212842567B00DF0BFC /* LaunchScreen.storyboard */,
 				941BDB242842567B00DF0BFC /* Info.plist */,
@@ -165,6 +169,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CD3CD64F29879D1D00D802B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				941BDB1C2842567A00DF0BFC /* Main.storyboard */,
+				941BDB4E2842570D00DF0BFC /* SearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD3CD65029879D6800D802B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD3CD65129879D8900D802B8 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +204,7 @@
 			name = GithubUserProfile;
 			packageProductDependencies = (
 				94D1CB7B28434F190047D692 /* Kingfisher */,
+				CD3CD65429879FE700D802B8 /* Alamofire */,
 			);
 			productName = GithubUserProfile;
 			productReference = 941BDB132842567A00DF0BFC /* GithubUserProfile.app */;
@@ -258,6 +280,7 @@
 			mainGroup = 941BDB0A2842567A00DF0BFC;
 			packageReferences = (
 				94D1CB7A28434F190047D692 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CD3CD65329879FE700D802B8 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 941BDB142842567A00DF0BFC /* Products */;
 			projectDirPath = "";
@@ -304,6 +327,7 @@
 			files = (
 				941BDB4F2842570D00DF0BFC /* SearchViewController.swift in Sources */,
 				941BDB512842574700DF0BFC /* UserProfile.swift in Sources */,
+				CD3CD65229879D8900D802B8 /* SearchViewModel.swift in Sources */,
 				941BDB172842567A00DF0BFC /* AppDelegate.swift in Sources */,
 				941BDB49284256AD00DF0BFC /* NetworkService.swift in Sources */,
 				941BDB4A284256AD00DF0BFC /* Resource.swift in Sources */,
@@ -660,6 +684,14 @@
 				version = 7.2.2;
 			};
 		};
+		CD3CD65329879FE700D802B8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -667,6 +699,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 94D1CB7A28434F190047D692 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		CD3CD65429879FE700D802B8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD3CD65329879FE700D802B8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
