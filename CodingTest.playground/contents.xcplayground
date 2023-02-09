@@ -3,5 +3,7 @@
     <pages>
         <page name='LV0.Bubbling'/>
         <page name='LV1.Trio'/>
+        <page name='LV0.CutPaper'/>
+        <page name='LV0.Login'/>
     </pages>
 </playground>
