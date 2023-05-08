@@ -58,10 +58,10 @@ class ViewController: UIViewController {
                 let pitch = isPortrait ? attitude.pitch : attitude.roll
                 let roll = isPortrait ? attitude.roll : -attitude.pitch
                 
-                let quaternion = Quaternion(x: attitude.quaternion.x,
-                                            y: attitude.quaternion.y,
-                                            z: attitude.quaternion.z,
-                                            w: attitude.quaternion.w)
+                let quaternion = Quaternion(x: Float(attitude.quaternion.x),
+                                            y: Float(attitude.quaternion.y),
+                                            z: Float(attitude.quaternion.z),
+                                            w: Float(attitude.quaternion.w))
                 
                 
                 
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
                     
                     // 네트워크
                     let motionModel = MotionModel(eulerRotation: eulerRotation, quaternion: quaternion)
-                    self?.networkManager.startSendData(data: motionModel)
+                    self?.networkManager.sendBinaryData(motionData: motionModel)
                 })
             }
         }
@@ -124,16 +124,16 @@ class ViewController: UIViewController {
         }
     }
     
-    func getUnityRotation(yaw: Double, roll: Double, pitch: Double, handler: (_ x: Double, _ y: Double, _ z: Double) -> Void) {
+    func getUnityRotation(yaw: Double, roll: Double, pitch: Double, handler: (_ x: Float, _ y: Float, _ z: Float) -> Void) {
         // Degree를 Radian으로 변환합니다.
 
         let unityX = convertXAngle(oldX: pitch * -57.2958)
         let unityY = yaw * -57.2958
         let unityZ = (-roll * 120.0) / 2
         
-        let convertedX = (unityX * 100).rounded() / 100
-        let convertedY = (unityY * 100).rounded() / 100
-        let convertedZ = (unityZ * 100).rounded() / 100
+        let convertedX = Float((unityX * 100).rounded() / 100)
+        let convertedY = Float((unityY * 100).rounded() / 100)
+        let convertedZ = Float((unityZ * 100).rounded() / 100)
         
         handler(convertedX, convertedY, convertedZ)
     }

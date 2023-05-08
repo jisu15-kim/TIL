@@ -13,14 +13,14 @@ struct MotionModel: Codable {
 }
 
 struct EulerRotation: Codable {
-    let x: Double
-    let y: Double
-    let z: Double
+    let x: Float
+    let y: Float
+    let z: Float
 }
 
 struct Quaternion: Codable {
-    let x: Double
-    let y: Double
-    let z: Double
-    let w: Double
+    let x: Float
+    let y: Float
+    let z: Float
+    let w: Float
 }
